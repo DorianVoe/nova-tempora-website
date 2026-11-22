@@ -4,151 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071321">
-  <meta name="description" content="Kontakt zu Nova Tempora: Fragen, Ideen, Zusammenarbeit und Interesse an unserer Community.">
+  <meta name="description" content="Kontakt zu Nova Tempora: Fragen, Ideen, Zusammenarbeit oder Interesse am Verein? Schreib uns über das Kontaktformular.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kontakt | Nova Tempora">
-  <meta property="og:description" content="Kontaktieren Sie Nova Tempora – History, Technology, Society.">
-  <link rel="icon" type="image/webp" href="images/nova-tempora-logo.webp">
+  <meta property="og:description" content="Schreib uns – Nova Tempora, History, Technology, Society.">
+  <meta property="og:image" content="https://novatempora.ch/images/nova-tempora-hero.webp">
   <link rel="canonical" href="https://novatempora.ch/kontakt.html">
+  <link rel="icon" href="images/nova-tempora-logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
   <title>Kontakt | Nova Tempora</title>
-  <style>
-    :root{color-scheme:dark;--bg:#071321;--panel:#0d2031;--panel2:#11283a;--text:#f3f6f9;--muted:#b2c3cf;--gold:#ebbd70;--blue:#69c8ee;--mint:#8ad6c1;--border:rgba(199,223,237,.16);--max:1160px}
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:110px}
-    body{margin:0;min-width:320px;background:radial-gradient(ellipse 800px 550px at 95% 18%,rgba(39,131,176,.11),transparent 74%),radial-gradient(ellipse 900px 700px at -10% 52%,rgba(224,155,84,.06),transparent 70%),var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.65;color:var(--text)}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit}
-    a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
-    .container{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
-    .topbar{position:sticky;top:0;z-index:10;background:rgba(7,19,33,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-    .topbar-inner{display:flex;min-height:86px;align-items:center;justify-content:space-between;gap:22px}
-    .brand{display:inline-flex;align-items:center;min-width:0;text-decoration:none}
-    .brand img{width:225px;height:72px;object-fit:contain;object-position:left center}
-    .nav{display:flex;align-items:center;gap:clamp(12px,2.3vw,31px);flex-wrap:wrap;justify-content:flex-end}
-    .nav a{font-size:.88rem;white-space:nowrap;text-decoration:none;color:#d6e2ea;transition:color .2s}
-    .nav a:hover{color:var(--gold)}
-    .nav a.nav-cta{padding:10px 15px;border:1px solid rgba(235,189,112,.65);border-radius:999px;color:var(--gold)}
-    .hero{padding:42px 0 78px}
-    .hero-poster{border:1px solid rgba(255,255,255,.13);border-radius:18px;overflow:hidden;background:#061426;box-shadow:0 30px 90px rgba(0,0,0,.35)}
-    .hero-poster img{width:100%;aspect-ratio:3/2;object-fit:cover}
-    .hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;padding-top:38px}
-    .eyebrow{display:block;text-transform:uppercase;letter-spacing:.22em;font-size:.71rem;font-weight:800;color:var(--gold)}
-    h1,h2,h3,p{margin-top:0}
-    h1{max-width:760px;font-size:clamp(2rem,4.2vw,3.8rem);line-height:1.13;letter-spacing:-.047em;margin:12px 0 15px;font-weight:750}
-    .hero-bottom p{max-width:650px;color:var(--muted);font-size:1.03rem;margin:0}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-align:center;min-height:47px;padding:10px 19px;border-radius:7px;text-decoration:none;font-size:.94rem;font-weight:700;transition:transform .2s,background .2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#102334;background:var(--gold)}
-    .btn-primary:hover{background:#f6d49e}
-    .btn-outline{border:1px solid var(--border);color:var(--text)}
-    .section{padding:93px 0}
-    .section-head{max-width:740px;margin-bottom:34px}
-    h2{font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.16;letter-spacing:-.04em;margin:13px 0 18px}
-    .section-head p,.body-copy{color:var(--muted);font-size:1.04rem;line-height:1.78}
-    .themen{border-top:1px solid var(--border);background:linear-gradient(180deg,rgba(41,104,138,.06),transparent 72%)}
-    .themen-visual{max-width:860px;margin:0 auto 34px;border:1px solid var(--border);border-radius:17px;overflow:hidden;background:#071729}
-    .themen-visual img{width:100%}
-    .themen-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .card{padding:29px 27px 31px;background:linear-gradient(155deg,rgba(21,49,71,.92),rgba(10,28,44,.92));border:1px solid var(--border);border-radius:14px;min-height:231px}
-    .card .number{font-size:.76rem;letter-spacing:.18em;font-weight:800;color:var(--gold)}
-    .card h3{font-size:1.47rem;line-height:1.2;margin:18px 0 11px;letter-spacing:-.02em}
-    .card p{color:var(--muted);margin:0;font-size:.96rem}
-    .about{border-block:1px solid var(--border);background:linear-gradient(120deg,rgba(235,189,112,.065),rgba(19,65,94,.08))}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:min(9vw,100px);align-items:center}
-    .facts{border-left:2px solid var(--gold);padding:8px 0 8px 24px}
-    .facts strong{font-size:1.15rem;line-height:1.5;display:block}
-    .facts p{color:var(--muted);margin:10px 0 0}
-    .quote-section{padding:100px 0;text-align:center}
-    .quote-section blockquote{max-width:970px;margin:0 auto;font-size:clamp(1.6rem,3.7vw,3.2rem);line-height:1.35;letter-spacing:-.035em;font-weight:600}
-    .quote-section blockquote span{color:var(--gold)}
-    .quote-section p{margin:23px auto 0;max-width:680px;color:var(--muted)}
-    .contact{padding:0 0 98px}
-    .contact-panel{border:1px solid rgba(235,189,112,.25);border-radius:18px;padding:clamp(27px,5vw,55px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;background:radial-gradient(circle at 95% 0%,rgba(236,191,107,.12),transparent 38%),#10263a}
-    .contact-panel h2{margin-bottom:14px}
-    .contact-panel p{color:var(--muted);margin:0}
-    .status{display:flex;flex-direction:column;gap:12px;justify-content:center;border-left:1px solid var(--border);padding-left:36px}
-    .status-label{font-size:.72rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;font-weight:800}
-    .status strong{font-size:1.22rem}
-    .status small{color:var(--muted);font-size:.92rem}
-    .footer{border-top:1px solid var(--border);padding:30px 0 38px;color:var(--muted);font-size:.85rem}
-    .footer .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-    .footer a{text-decoration:none;color:var(--gold)}
-    @media(max-width:950px){.hero-bottom{align-items:flex-start;flex-direction:column}.buttons{width:100%}.topbar-inner{min-height:78px}.brand img{width:188px;height:62px}.nav{gap:12px}.nav a{font-size:.8rem}.two-col{gap:40px}}
-    @media(max-width:680px){.container{width:calc(100% - 30px)}.topbar-inner{flex-wrap:wrap;justify-content:center;padding:5px 0 15px;gap:2px}.brand img{width:215px;height:65px}.nav{justify-content:center;gap:13px 17px}.nav a{font-size:.78rem}.nav a.nav-cta{padding:6px 11px}.hero{padding:22px 0 55px}.hero-poster{border-radius:11px}.hero-bottom{padding-top:24px;gap:23px}.buttons{flex-direction:column}.btn{width:100%}.section{padding:62px 0}.themen-grid,.two-col,.contact-panel{grid-template-columns:1fr}.themen-visual{border-radius:11px}.card{min-height:0}.about .facts{margin-top:6px}.quote-section{padding:74px 0}.contact{padding-bottom:66px}.contact-panel{gap:23px;padding:30px 23px}.status{border-left:0;border-top:1px solid var(--border);padding:20px 0 0}.footer .container{justify-content:center;text-align:center}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-  
-
-    .nav a[aria-current="page"]{color:var(--gold)}
-    .contact-hero{padding:88px 0 45px;border-bottom:1px solid var(--border)}
-    .contact-hero h1{max-width:900px;margin:17px 0 17px}
-    .contact-hero p{max-width:670px;font-size:1.06rem;color:var(--muted);line-height:1.8}
-    .back{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--gold);font-weight:650;font-size:.88rem;margin-bottom:24px}
-    .back:hover{text-decoration:underline}
-    .contact-main{padding:64px 0 104px}
-    .contact-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.75fr);gap:34px;align-items:start}
-    .contact-form-card{background:linear-gradient(160deg,#132d43,#0c2032);border:1px solid rgba(235,189,112,.26);border-radius:20px;padding:clamp(24px,4.2vw,48px);box-shadow:0 28px 72px rgba(0,0,0,.16)}
-    .contact-form-card h2{font-size:clamp(1.4rem,2.5vw,2rem);margin:0 0 10px}
-    .form-intro{color:var(--muted);margin:0 0 32px;font-size:.94rem}
-    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .field{min-width:0;display:flex;flex-direction:column;gap:8px}
-    .field.full{grid-column:1/-1}
-    .field label{font-size:.9rem;font-weight:680;color:var(--text)}
-    .required{color:var(--gold)}
-    .field input,.field select,.field textarea{width:100%;max-width:100%;border:1px solid rgba(199,223,237,.28);border-radius:9px;background:#081b2b;color:var(--text);font:inherit;font-size:.95rem;padding:13px 15px;outline:none;transition:border-color .16s,box-shadow .16s}
-    .field input,.field select{min-height:50px}
-    .field input::placeholder,.field textarea::placeholder{color:#91aabb;opacity:1}
-    .field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{border-color:var(--gold);box-shadow:0 0 0 3px rgba(235,189,112,.17)}
-    .field textarea{min-height:188px;resize:vertical}
-    .field select{appearance:auto;cursor:pointer}
-    .form-note{color:var(--muted);font-size:.83rem;line-height:1.65;margin:23px 0 18px}
-    .form-note a{color:var(--gold);text-underline-offset:3px}
-    .form-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .form-actions .btn{border:none;cursor:pointer;font:inherit;font-weight:700;font-size:.95rem}
-    .form-actions small{color:var(--muted)}
-    .contact-aside{display:grid;gap:20px}
-    .info-card{padding:28px;border-radius:16px;border:1px solid var(--border);background:rgba(17,40,58,.82)}
-    .info-card .eyebrow{font-size:.67rem}
-    .info-card h2{font-size:1.34rem;letter-spacing:-.02em;margin:14px 0 12px}
-    .info-card p{font-size:.94rem;color:var(--muted);margin:0 0 10px}
-    .info-card a{color:var(--gold);overflow-wrap:anywhere;text-underline-offset:3px}
-    .info-card ul{padding-left:19px;color:var(--muted);font-size:.91rem;margin:4px 0 0}
-    .info-card li+li{margin-top:9px}
-    @media(max-width:850px){.contact-layout{grid-template-columns:1fr}.contact-aside{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:680px){.contact-hero{padding:45px 0 30px}.contact-main{padding:36px 0 62px}.contact-form-card{border-radius:14px;padding:25px 20px}.form-grid,.contact-aside{grid-template-columns:1fr}.form-actions .btn{width:100%}}
-</style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="index.html" aria-label="Nova Tempora – zur Startseite">
-        <img src="images/nova-tempora-logo.webp" width="2048" height="682" alt="Nova Tempora – Logo mit goldenem Bogen" decoding="async">
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Nova Tempora – Startseite">
+        <img src="images/nova-tempora-logo.webp" alt="Nova Tempora" width="2048" height="682" decoding="async">
       </a>
-      <nav class="nav" aria-label="Hauptnavigation">
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
         <a href="index.html#themen">Themen</a>
-        <a href="index.html#ueber-uns">Über uns</a>
-        <a href="index.html#vision">Vision</a>
-        <a class="nav-cta" href="kontakt.html" aria-current="page">Kontakt</a>
+        <a href="verein.html">Verein</a>
+        <a href="index.html#projekte">Projekte</a>
+        <a class="nav-contact" href="kontakt.html" aria-current="page">Kontakt</a>
       </nav>
+      <details class="mobile-menu">
+        <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menü</summary>
+        <nav class="mobile-links" aria-label="Mobile Navigation">
+          <a href="index.html">Start</a>
+          <a href="index.html#themen">Themen</a>
+          <a href="verein.html">Verein</a>
+          <a href="index.html#projekte">Projekte</a>
+          <a href="kontakt.html" aria-current="page">Kontakt</a>
+        </nav>
+      </details>
     </div>
   </header>
-
-  <main>
-    <section class="contact-hero" aria-labelledby="contact-title">
+  <main id="inhalt">
+    <section class="page-hero" aria-labelledby="seiten-titel">
       <div class="container">
-        <a href="index.html" class="back"><span aria-hidden="true">←</span> Zurück zur Startseite</a>
+        <nav class="breadcrumb" aria-label="Brotkrumennavigation"><a href="index.html">Start</a><span aria-hidden="true">/</span><span>Kontakt</span></nav>
         <span class="eyebrow">Nova Tempora · Im Dialog</span>
-        <h1 id="contact-title">Ideen beginnen mit einem Gespräch.</h1>
+        <h1 id="seiten-titel">Ideen beginnen mit einem Gespräch.</h1>
         <p>Du hast Fragen zum Verein, möchtest dich einbringen oder eine Zusammenarbeit vorschlagen? Wir freuen uns, von dir zu hören.</p>
       </div>
     </section>
-
-    <section class="contact-main" aria-label="Kontaktmöglichkeiten">
+    <section class="contact-section" aria-label="Kontaktmöglichkeiten">
       <div class="container contact-layout">
-        <div class="contact-form-card">
+        <div class="form-card">
           <h2>Schreib uns eine Nachricht</h2>
           <p class="form-intro">Fülle das Formular aus. Wir melden uns über die angegebene E-Mail-Adresse bei dir.</p>
-
           <form action="https://formspree.io/f/meagpjoj" method="POST" accept-charset="UTF-8">
             <input type="hidden" name="_subject" value="Neue Kontaktanfrage – Nova Tempora">
             <div class="form-grid">
@@ -178,19 +83,19 @@
             </div>
             <p class="form-note">Mit dem Absenden werden deine Angaben zur Bearbeitung der Anfrage an den Formulardienst <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree</a> übermittelt. Bitte keine vertraulichen oder besonders schützenswerten Daten eingeben. <span aria-hidden="true">*</span> Pflichtfelder.</p>
             <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Nachricht senden <span aria-hidden="true">↗</span></button>
+              <button class="btn btn-gold" type="submit">Nachricht senden <span aria-hidden="true">↗</span></button>
               <small>Antworten an deine E-Mail-Adresse</small>
             </div>
           </form>
         </div>
         <aside class="contact-aside" aria-label="Weitere Informationen">
-          <div class="info-card">
+          <div class="aside-card">
             <span class="eyebrow">Direkter Kontakt</span>
             <h2>Lieber per E-Mail?</h2>
             <p>Schreib uns gerne auch direkt – ganz ohne Formular.</p>
             <a href="mailto:info@novatempora.ch">info@novatempora.ch</a>
           </div>
-          <div class="info-card">
+          <div class="aside-card">
             <span class="eyebrow">History · Technology · Society</span>
             <h2>Worüber wir uns freuen</h2>
             <ul>
@@ -204,11 +109,12 @@
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <span>© 2026 Nova Tempora · History · Technology · Society</span>
-      <a href="index.html">Zurück zur Startseite ↑</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-small">© 2026 Nova Tempora · History · Technology · Society</span>
+      <nav class="footer-nav" aria-label="Footernavigation">
+        <a href="index.html">Start</a><a href="verein.html">Verein</a><a href="kontakt.html">Kontakt</a><a href="mailto:info@novatempora.ch">E-Mail</a>
+      </nav>
     </div>
   </footer>
 </body>
