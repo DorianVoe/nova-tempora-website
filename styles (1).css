@@ -228,3 +228,41 @@ p { color: var(--muted); }
   html { scroll-behavior: auto; }
   .btn,.desktop-nav a,.desktop-nav a::after { transition: none; }
 }
+
+/* Vorstand und Vereinsdomizil */
+.leadership { border-top: 1px solid var(--line); }
+.leadership-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.leader-card { display: flex; gap: 23px; align-items: center; padding: 32px; border-radius: 18px; border: 1px solid rgba(235,189,112,.25); background: linear-gradient(145deg,rgba(22,53,73,.85),rgba(9,27,43,.9)); min-height: 158px; }
+.leader-symbol { display: inline-grid; flex: 0 0 69px; width: 69px; height: 69px; place-items: center; background: rgba(235,189,112,.095); color: var(--gold); border: 1px solid rgba(235,189,112,.42); border-radius: 50%; font-weight: 800; font-size: 1.2rem; letter-spacing: .03em; }
+.leader-card h3 { font-size: clamp(1.28rem,2.5vw,1.65rem); margin: 8px 0 0; }
+.domicile-section { border-top: 1px solid var(--line); }
+.domicile-card { border-radius: 17px; border: 1px solid var(--line); background: rgba(16,40,57,.77); padding: 32px; }
+.postal-address { display: block; margin-top: 15px; font-style: normal; color: var(--muted); line-height: 1.85; font-size: 1.02rem; }
+.postal-address strong { font-size: 1.12rem; color: var(--ink); }
+.aside-card .postal-address { margin-top: 6px; font-size: .96rem; }
+.aside-card .postal-address strong { font-size: 1rem; }
+/* Datenschutz */
+.privacy-hero { padding-bottom: 60px; }
+.privacy-section { padding: 68px 0 110px; }
+.privacy-layout { display: grid; grid-template-columns: 245px minmax(0,1fr); align-items: start; gap: clamp(30px,6vw,92px); }
+.privacy-aside { display: flex; flex-direction: column; gap: 13px; border: 1px solid var(--line); background: rgba(17,43,61,.55); border-radius: 15px; padding: 23px; position: sticky; top: 112px; }
+.privacy-aside .tiny-label { margin-bottom: 6px; }
+.privacy-aside a { color: var(--muted); text-decoration: none; font-size: .92rem; }
+.privacy-aside a:hover { color: var(--gold); }
+.privacy-content { max-width: 840px; }
+.privacy-date { font-size: .88rem; margin: 0 0 30px; color: var(--gold); }
+.privacy-content section { scroll-margin-top: 120px; border-top: 1px solid var(--line); padding: 33px 0 37px; }
+.privacy-content section h2 { font-size: clamp(1.45rem,2.7vw,2.25rem); margin: 12px 0 15px; }
+.privacy-content section p { font-size: .99rem; line-height: 1.87; }
+.privacy-content section a { color: var(--gold); overflow-wrap: anywhere; }
+.privacy-content section .postal-address { margin: 4px 0 15px; }
+@media (max-width: 760px) {
+  .leadership-grid,.privacy-layout { grid-template-columns: 1fr; }
+  .privacy-aside { position: static; }
+  .privacy-section { padding: 45px 0 75px; }
+}
+@media (max-width: 560px) {
+  .leader-card { padding: 23px; gap: 17px; }
+  .leader-symbol { flex-basis: 58px; width: 58px; height: 58px; }
+  .domicile-card { padding: 26px; }
+}
