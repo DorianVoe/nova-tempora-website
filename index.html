@@ -4,180 +4,172 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071321">
-  <meta name="description" content="Nova Tempora verbindet Geschichte, Technologie und Gesellschaft. Understanding the past. Exploring the future.">
+  <meta name="description" content="Nova Tempora – die Community für Geschichte, Technologie und Gesellschaft. Understanding the past. Exploring the future.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nova Tempora | History · Technology · Society">
   <meta property="og:description" content="Understanding the past. Exploring the future.">
   <meta property="og:image" content="https://novatempora.ch/images/nova-tempora-hero.webp">
-  <link rel="icon" type="image/webp" href="images/nova-tempora-logo.webp">
   <link rel="canonical" href="https://novatempora.ch/">
+  <link rel="icon" href="images/nova-tempora-logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
   <title>Nova Tempora | History · Technology · Society</title>
-  <style>
-    :root{color-scheme:dark;--bg:#071321;--panel:#0d2031;--panel2:#11283a;--text:#f3f6f9;--muted:#b2c3cf;--gold:#ebbd70;--blue:#69c8ee;--mint:#8ad6c1;--border:rgba(199,223,237,.16);--max:1160px}
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:110px}
-    body{margin:0;min-width:320px;background:radial-gradient(ellipse 800px 550px at 95% 18%,rgba(39,131,176,.11),transparent 74%),radial-gradient(ellipse 900px 700px at -10% 52%,rgba(224,155,84,.06),transparent 70%),var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.65;color:var(--text)}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit}
-    a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
-    .container{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
-    .topbar{position:sticky;top:0;z-index:10;background:rgba(7,19,33,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-    .topbar-inner{display:flex;min-height:86px;align-items:center;justify-content:space-between;gap:22px}
-    .brand{display:inline-flex;align-items:center;min-width:0;text-decoration:none}
-    .brand img{width:225px;height:72px;object-fit:contain;object-position:left center}
-    .nav{display:flex;align-items:center;gap:clamp(12px,2.3vw,31px);flex-wrap:wrap;justify-content:flex-end}
-    .nav a{font-size:.88rem;white-space:nowrap;text-decoration:none;color:#d6e2ea;transition:color .2s}
-    .nav a:hover{color:var(--gold)}
-    .nav a.nav-cta{padding:10px 15px;border:1px solid rgba(235,189,112,.65);border-radius:999px;color:var(--gold)}
-    .hero{padding:42px 0 78px}
-    .hero-poster{border:1px solid rgba(255,255,255,.13);border-radius:18px;overflow:hidden;background:#061426;box-shadow:0 30px 90px rgba(0,0,0,.35)}
-    .hero-poster img{width:100%;aspect-ratio:3/2;object-fit:cover}
-    .hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;padding-top:38px}
-    .eyebrow{display:block;text-transform:uppercase;letter-spacing:.22em;font-size:.71rem;font-weight:800;color:var(--gold)}
-    h1,h2,h3,p{margin-top:0}
-    h1{max-width:760px;font-size:clamp(2rem,4.2vw,3.8rem);line-height:1.13;letter-spacing:-.047em;margin:12px 0 15px;font-weight:750}
-    .hero-bottom p{max-width:650px;color:var(--muted);font-size:1.03rem;margin:0}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-align:center;min-height:47px;padding:10px 19px;border-radius:7px;text-decoration:none;font-size:.94rem;font-weight:700;transition:transform .2s,background .2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#102334;background:var(--gold)}
-    .btn-primary:hover{background:#f6d49e}
-    .btn-outline{border:1px solid var(--border);color:var(--text)}
-    .section{padding:93px 0}
-    .section-head{max-width:740px;margin-bottom:34px}
-    h2{font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.16;letter-spacing:-.04em;margin:13px 0 18px}
-    .section-head p,.body-copy{color:var(--muted);font-size:1.04rem;line-height:1.78}
-    .themen{border-top:1px solid var(--border);background:linear-gradient(180deg,rgba(41,104,138,.06),transparent 72%)}
-    .themen-visual{max-width:860px;margin:0 auto 34px;border:1px solid var(--border);border-radius:17px;overflow:hidden;background:#071729}
-    .themen-visual img{width:100%}
-    .themen-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .card{padding:29px 27px 31px;background:linear-gradient(155deg,rgba(21,49,71,.92),rgba(10,28,44,.92));border:1px solid var(--border);border-radius:14px;min-height:231px}
-    .card .number{font-size:.76rem;letter-spacing:.18em;font-weight:800;color:var(--gold)}
-    .card h3{font-size:1.47rem;line-height:1.2;margin:18px 0 11px;letter-spacing:-.02em}
-    .card p{color:var(--muted);margin:0;font-size:.96rem}
-    .about{border-block:1px solid var(--border);background:linear-gradient(120deg,rgba(235,189,112,.065),rgba(19,65,94,.08))}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:min(9vw,100px);align-items:center}
-    .facts{border-left:2px solid var(--gold);padding:8px 0 8px 24px}
-    .facts strong{font-size:1.15rem;line-height:1.5;display:block}
-    .facts p{color:var(--muted);margin:10px 0 0}
-    .quote-section{padding:100px 0;text-align:center}
-    .quote-section blockquote{max-width:970px;margin:0 auto;font-size:clamp(1.6rem,3.7vw,3.2rem);line-height:1.35;letter-spacing:-.035em;font-weight:600}
-    .quote-section blockquote span{color:var(--gold)}
-    .quote-section p{margin:23px auto 0;max-width:680px;color:var(--muted)}
-    .contact{padding:0 0 98px}
-    .contact-panel{border:1px solid rgba(235,189,112,.25);border-radius:18px;padding:clamp(27px,5vw,55px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;background:radial-gradient(circle at 95% 0%,rgba(236,191,107,.12),transparent 38%),#10263a}
-    .contact-panel h2{margin-bottom:14px}
-    .contact-panel p{color:var(--muted);margin:0}
-    .status{display:flex;flex-direction:column;gap:12px;justify-content:center;border-left:1px solid var(--border);padding-left:36px}
-    .status-label{font-size:.72rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;font-weight:800}
-    .status strong{font-size:1.22rem}
-    .status small{color:var(--muted);font-size:.92rem}
-    .footer{border-top:1px solid var(--border);padding:30px 0 38px;color:var(--muted);font-size:.85rem}
-    .footer .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-    .footer a{text-decoration:none;color:var(--gold)}
-    @media(max-width:950px){.hero-bottom{align-items:flex-start;flex-direction:column}.buttons{width:100%}.topbar-inner{min-height:78px}.brand img{width:188px;height:62px}.nav{gap:12px}.nav a{font-size:.8rem}.two-col{gap:40px}}
-    @media(max-width:680px){.container{width:calc(100% - 30px)}.topbar-inner{flex-wrap:wrap;justify-content:center;padding:5px 0 15px;gap:2px}.brand img{width:215px;height:65px}.nav{justify-content:center;gap:13px 17px}.nav a{font-size:.78rem}.nav a.nav-cta{padding:6px 11px}.hero{padding:22px 0 55px}.hero-poster{border-radius:11px}.hero-bottom{padding-top:24px;gap:23px}.buttons{flex-direction:column}.btn{width:100%}.section{padding:62px 0}.themen-grid,.two-col,.contact-panel{grid-template-columns:1fr}.themen-visual{border-radius:11px}.card{min-height:0}.about .facts{margin-top:6px}.quote-section{padding:74px 0}.contact{padding-bottom:66px}.contact-panel{gap:23px;padding:30px 23px}.status{border-left:0;border-top:1px solid var(--border);padding:20px 0 0}.footer .container{justify-content:center;text-align:center}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="#start" aria-label="Nova Tempora – zur Startseite">
-        <img src="images/nova-tempora-logo.webp" width="2048" height="682" alt="Nova Tempora – Logo mit goldenem Bogen" decoding="async">
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Nova Tempora – Startseite">
+        <img src="images/nova-tempora-logo.webp" alt="Nova Tempora" width="2048" height="682" decoding="async">
       </a>
-      <nav class="nav" aria-label="Hauptnavigation">
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="index.html" aria-current="page">Start</a>
         <a href="#themen">Themen</a>
-        <a href="#ueber-uns">Über uns</a>
-        <a href="#vision">Vision</a>
-        <a class="nav-cta" href="kontakt.html">Kontakt</a>
+        <a href="verein.html">Verein</a>
+        <a href="#projekte">Projekte</a>
+        <a class="nav-contact" href="kontakt.html">Kontakt</a>
       </nav>
+      <details class="mobile-menu">
+        <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menü</summary>
+        <nav class="mobile-links" aria-label="Mobile Navigation">
+          <a href="index.html" aria-current="page">Start</a>
+          <a href="#themen">Themen</a>
+          <a href="verein.html">Verein</a>
+          <a href="#projekte">Projekte</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </details>
     </div>
   </header>
-
-  <main id="start">
+  <main id="inhalt">
     <section class="hero container" aria-labelledby="haupttitel">
-      <div class="hero-poster">
-        <img src="images/nova-tempora-hero.webp" width="1536" height="1024" alt="Nova Tempora mit goldenem Bogen, antiken Bauwerken links, futuristischer Stadt rechts und einer vernetzten Erde am Horizont. Slogan: Understanding the past. Exploring the future." fetchpriority="high">
+      <div class="hero-art">
+        <img src="images/nova-tempora-hero.webp" alt="Nova Tempora: antike Bauwerke und eine futuristische Stadt über der vernetzten Erde, mit dem Leitgedanken Understanding the past. Exploring the future." width="1536" height="1024" fetchpriority="high">
       </div>
-      <div class="hero-bottom">
+      <div class="hero-intro">
         <div>
           <span class="eyebrow">History · Technology · Society</span>
           <h1 id="haupttitel">Wo Vergangenheit auf Zukunft trifft.</h1>
+        </div>
+        <div class="hero-intro-right">
           <p>Eine Community für Neugier, Austausch und neue Perspektiven – an der Schnittstelle von Geschichte, Technologie und Gesellschaft.</p>
-        </div>
-        <div class="buttons">
-          <a class="btn btn-primary" href="#themen">Unsere Themen entdecken <span aria-hidden="true">↗</span></a>
-          <a class="btn btn-outline" href="#ueber-uns">Über Nova Tempora</a>
+          <div class="actions">
+            <a href="#themen" class="btn btn-gold">Unsere Themen entdecken <span aria-hidden="true">↗</span></a>
+            <a href="verein.html" class="btn btn-ghost">Der Verein</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section themen" id="themen" aria-labelledby="themen-title">
+    <section class="section themes" id="themen" aria-labelledby="themen-titel">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Drei Perspektiven · Ein gemeinsamer Blick</span>
-          <h2 id="themen-title">History. Technology. Society.</h2>
-          <p>Unsere drei Themen sind keine getrennten Welten. Sie beeinflussen sich gegenseitig – und genau in diesen Verbindungen entstehen neue Fragen und Ideen.</p>
+        <div class="themes-layout">
+          <div class="themes-copy">
+            <span class="eyebrow">Drei Perspektiven · Eine Verbindung</span>
+            <h2 id="themen-titel">History.<br>Technology.<br>Society.</h2>
+            <p>Unsere Themen sind keine getrennten Welten. Sie beeinflussen sich gegenseitig – und genau in diesen Verbindungen entstehen neue Fragen, Ideen und Perspektiven.</p>
+            <p>Wir möchten verstehen, woher wir kommen, was uns heute prägt und welche Zukunft wir gemeinsam gestalten können.</p>
+          </div>
+          <figure class="themes-visual">
+            <img src="images/history-technology-society.webp" alt="Drei überlappende Kreise für History, Technology und Society" width="1448" height="1086" loading="lazy" decoding="async">
+          </figure>
         </div>
-        <figure class="themen-visual">
-          <img src="images/history-technology-society.webp" alt="Drei miteinander überlappende Kreise zeigen History, Technology und Society – Geschichte, Technik und Menschen im Zusammenspiel." width="1448" height="1086" loading="lazy" decoding="async">
-        </figure>
-        <div class="themen-grid">
-          <article class="card"><span class="number">01 / HISTORY</span><h3>Vergangenheit verstehen</h3><p>Geschichte entdecken, Entwicklungen einordnen und die Gegenwart aus neuen Perspektiven betrachten.</p></article>
-          <article class="card"><span class="number">02 / TECHNOLOGY</span><h3>Zukunft erkunden</h3><p>Technologien verstehen, Chancen und Herausforderungen diskutieren und Entwicklungen kritisch begleiten.</p></article>
-          <article class="card"><span class="number">03 / SOCIETY</span><h3>Menschen verbinden</h3><p>Ideen austauschen, gesellschaftliche Zusammenhänge erkennen und unterschiedliche Sichtweisen zusammenbringen.</p></article>
+        <div class="topic-cards">
+          <article class="topic-card">
+            <span class="number">01 / HISTORY</span>
+            <h3>Vergangenheit verstehen</h3>
+            <p>Geschichte entdecken, Entwicklungen einordnen und die Gegenwart aus neuen Perspektiven betrachten.</p>
+          </article>
+          <article class="topic-card">
+            <span class="number">02 / TECHNOLOGY</span>
+            <h3>Zukunft erkunden</h3>
+            <p>Technologien verstehen, Chancen und Herausforderungen diskutieren und Entwicklungen kritisch begleiten.</p>
+          </article>
+          <article class="topic-card">
+            <span class="number">03 / SOCIETY</span>
+            <h3>Menschen verbinden</h3>
+            <p>Ideen austauschen, gesellschaftliche Zusammenhänge erkennen und unterschiedliche Sichtweisen zusammenbringen.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section about" id="ueber-uns" aria-labelledby="ueber-uns-title">
-      <div class="container two-col">
+    <section class="section band" aria-labelledby="verein-teaser-titel">
+      <div class="container split">
         <div>
-          <span class="eyebrow">Über Nova Tempora</span>
-          <h2 id="ueber-uns-title">Eine Plattform für Menschen, Ideen und Austausch.</h2>
-          <p class="body-copy">Nova Tempora bringt Menschen zusammen, die über einzelne Fachgebiete hinausdenken möchten. Wir interessieren uns für die Kräfte, die unsere Welt geprägt haben – und für jene, die sie verändern werden.</p>
+          <span class="eyebrow">Der Verein Nova Tempora</span>
+          <h2 id="verein-teaser-titel">Eine Plattform für Menschen, Ideen und Austausch.</h2>
+          <p>Nova Tempora bringt Menschen zusammen, die über einzelne Fachgebiete hinausdenken möchten. Wir interessieren uns für die Kräfte, die unsere Welt geprägt haben – und für jene, die sie verändern werden.</p>
+          <a class="btn btn-ghost" href="verein.html">Mehr über den Verein <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="facts">
-          <strong>Neugier statt Grenzen.</strong>
-          <p>Wir verbinden Perspektiven aus Vergangenheit, Gegenwart und Zukunft.</p>
-          <strong style="margin-top:27px">Dialog statt Silodenken.</strong>
-          <p>Wir schaffen Raum für unterschiedliche Ideen und konstruktiven Austausch.</p>
+        <div class="keylines">
+          <div>
+            <h3>Neugier statt Grenzen.</h3>
+            <p>Wir verbinden Perspektiven aus Vergangenheit, Gegenwart und Zukunft.</p>
+          </div>
+          <div>
+            <h3>Dialog statt Silodenken.</h3>
+            <p>Wir schaffen Raum für unterschiedliche Ideen und konstruktiven Austausch.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="quote-section" id="vision" aria-labelledby="vision-title">
+    <section class="section projects" id="projekte" aria-labelledby="projekte-titel">
       <div class="container">
-        <span class="eyebrow">Unsere Vision</span>
-        <h2 id="vision-title" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap">Unsere Vision</h2>
-        <blockquote>„<span>Understanding the past.</span><br>Exploring the future.“</blockquote>
-        <p>Wir möchten Zusammenhänge sichtbar machen, Menschen vernetzen und den Blick für neue Möglichkeiten öffnen.</p>
+        <div class="project-head">
+          <div class="section-head">
+            <span class="eyebrow">Projekte &amp; Ideen</span>
+            <h2 id="projekte-titel">Ein Raum für das, was entstehen kann.</h2>
+            <p>Nova Tempora ist im Aufbau. Diese Felder zeigen, in welche Richtung sich die Community entwickeln kann – noch keine angekündigten Veranstaltungen.</p>
+          </div>
+          <span class="pill">Im Aufbau</span>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="index">01 / DIALOG</span>
+            <h3>Gespräche &amp; Austausch</h3>
+            <p>Unterschiedliche Perspektiven zusammenbringen und gemeinsam weiterdenken.</p>
+          </article>
+          <article class="project-card">
+            <span class="index">02 / PERSPEKTIVEN</span>
+            <h3>Fragen &amp; Themen</h3>
+            <p>Geschichte, Technologie und Gesellschaft aus mehr als einem Blickwinkel betrachten.</p>
+          </article>
+          <article class="project-card">
+            <span class="index">03 / COMMUNITY</span>
+            <h3>Ideen gemeinsam entwickeln</h3>
+            <p>Interessen vernetzen und offenbleiben für neue Anregungen aus der Community.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="contact container" id="kontakt" aria-labelledby="kontakt-title">
-      <div class="contact-panel">
+    <section class="vision container" aria-labelledby="vision-titel">
+      <span class="eyebrow">Unsere Vision</span>
+      <h2 class="sr-only" id="vision-titel">Unsere Vision</h2>
+      <blockquote>„<em>Understanding the past.</em><br>Exploring the future.“</blockquote>
+      <p>Wir möchten Zusammenhänge sichtbar machen, Menschen vernetzen und den Blick für neue Möglichkeiten öffnen.</p>
+    </section>
+
+    <section class="container cta-wrap" aria-labelledby="kontakt-titel">
+      <div class="cta-panel">
         <div>
-          <span class="eyebrow">Teil der Community werden</span>
-          <h2 id="kontakt-title">Neugier verbindet.</h2>
-          <p>Nova Tempora lebt vom Austausch. Ob du Fragen hast, Ideen einbringen oder mehr über unseren Verein erfahren möchtest: Wir freuen uns auf deine Nachricht.</p>
+          <span class="eyebrow">Im Dialog bleiben</span>
+          <h2 id="kontakt-titel">Neugier verbindet.</h2>
+          <p>Hast du Fragen zum Verein, eine Idee oder Interesse an unserer Community? Wir freuen uns, von dir zu hören.</p>
         </div>
-        <div class="status">
-          <span class="status-label">Wir freuen uns auf deine Nachricht</span>
-          <strong>Kontakt &amp; Mitmachen</strong>
-          <small>Du hast eine Frage, eine Idee oder Interesse an unserer Community?</small>
-          <a class="btn btn-primary" href="kontakt.html" style="align-self:flex-start">Zum Kontaktformular <span aria-hidden="true">↗</span></a>
-          <small>Oder direkt per E-Mail: <a href="mailto:info@novatempora.ch" style="color:var(--gold)">info@novatempora.ch</a></small>
+        <div class="actions">
+          <a class="btn btn-gold" href="kontakt.html">Kontakt aufnehmen <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <span>© 2026 Nova Tempora · History · Technology · Society</span>
-      <a href="#start">Zurück nach oben ↑</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-small">© 2026 Nova Tempora · History · Technology · Society</span>
+      <nav class="footer-nav" aria-label="Footernavigation">
+        <a href="index.html">Start</a><a href="verein.html">Verein</a><a href="kontakt.html">Kontakt</a><a href="mailto:info@novatempora.ch">E-Mail</a>
+      </nav>
     </div>
   </footer>
 </body>
