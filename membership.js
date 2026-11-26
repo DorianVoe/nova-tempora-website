@@ -1,6 +1,5 @@
-// Paste the dedicated Form.taxi submission URL here once it has been created.
-// An empty value keeps online submissions disabled on both language versions.
-const membershipEndpoint = '';
+// Dedicated Form.taxi submission URL shared by both language versions.
+const membershipEndpoint = 'https://form.taxi/s/l7viidja';
 
 const membershipForm = document.getElementById('membership-form');
 const membershipType = membershipForm.elements.membership_type;
@@ -46,6 +45,12 @@ membershipForm.addEventListener('submit', event => {
 if (applicationEnabled) {
   membershipForm.action = endpoint;
   submitApplication.disabled = false;
-  document.getElementById('join-unavailable').hidden = true;
-  membershipForm.setAttribute('aria-describedby', 'join-required');
+}
+
+if (new URLSearchParams(window.location.search).get('status') === 'received') {
+  const receipt = document.getElementById('join-receipt');
+  membershipForm.hidden = true;
+  document.getElementById('join-required').hidden = true;
+  receipt.hidden = false;
+  receipt.focus();
 }
