@@ -24,18 +24,24 @@
         <a href="index.html#themen">Themen</a>
         <a href="verein.html">Verein</a>
         <a href="veranstaltungen.html">Veranstaltungen</a>
-        <a href="kontakt.html" class="nav-contact">Kontakt</a>
-        <a class="nav-join" href="mitglied-werden.html" aria-current="page">Mitglied werden</a>
+        <div class="nav-actions">
+          <a href="kontakt.html" class="nav-contact">Kontakt</a>
+          <a class="nav-join" href="mitglied-werden.html" aria-current="page">Mitglied werden</a>
+        </div>
       </nav>
       <details class="mobile-menu">
         <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menü</summary>
         <nav class="mobile-links" aria-label="Mobile Navigation">
-        <a href="index.html">Start</a>
-        <a href="index.html#themen">Themen</a>
-        <a href="verein.html">Verein</a>
-        <a href="veranstaltungen.html">Veranstaltungen</a>
-        <a class="nav-contact" href="kontakt.html">Kontakt</a>
-        <a class="nav-join" href="mitglied-werden.html" aria-current="page">Mitglied werden</a>
+          <div class="nav-pages">
+            <a href="index.html">Start</a>
+            <a href="index.html#themen">Themen</a>
+            <a href="verein.html">Verein</a>
+            <a href="veranstaltungen.html">Veranstaltungen</a>
+          </div>
+          <div class="nav-actions">
+            <a class="nav-contact" href="kontakt.html">Kontakt</a>
+            <a class="nav-join" href="mitglied-werden.html" aria-current="page">Mitglied werden</a>
+          </div>
         </nav>
       </details>
       <nav class="lang-switch" aria-label="Sprache / Language">
@@ -73,6 +79,11 @@
             <input type="hidden" name="_lang" value="de">
             <input type="hidden" name="_subject" value="Mitgliedschaftsantrag – Nova Tempora">
             <input type="hidden" name="_next" value="https://novatempora.ch/mitglied-werden.html?status=received">
+            <section class="join-fee" aria-labelledby="mitgliedschaft-kosten">
+              <h3 id="mitgliedschaft-kosten">Mitgliedschaft: kostenlos</h3>
+              <p><strong>CHF 0.– Mitgliederbeitrag.</strong> Derzeit erheben wir keinen verpflichtenden Mitgliederbeitrag.</p>
+              <p>Wer Nova Tempora und den Aufbau der Community unterstützen möchte, kann freiwillig einen Förderbeitrag leisten. <strong>CHF 20.– pro Jahr</strong> sind ein unverbindlicher Orientierungsbetrag. Es gibt keinen Mindestbetrag. Eine Spende ist keine Voraussetzung für die Mitgliedschaft und hat keinen Einfluss auf die Aufnahme oder die Mitgliedsrechte.</p>
+            </section>
             <fieldset class="join-group">
               <legend>Persönliche Angaben</legend>
               <div class="form-grid">
@@ -181,6 +192,14 @@
                 <li><a href="datenschutz.html#mitgliedschaft">Datenschutzerklärung zur Mitgliedschaft</a></li>
               </ul>
             </fieldset>
+            <fieldset class="join-group">
+              <legend>Erinnerung zur freiwilligen Unterstützung</legend>
+              <label class="join-option">
+                <input type="checkbox" name="support_reminder_opt_in" value="yes" aria-describedby="support-reminder-hint">
+                <span>Ich möchte gelegentlich Informationen zu freiwilligen Unterstützungsmöglichkeiten erhalten (maximal eine Erinnerung pro Jahr).</span>
+              </label>
+              <p id="support-reminder-hint" class="join-help support-reminder-hint">Die Anmeldung ist freiwillig. Eine Erinnerung ist weder eine Zahlungsaufforderung noch eine Rechnung. Du kannst dich jederzeit per E-Mail an <a href="mailto:info@novatempora.ch">info@novatempora.ch</a> abmelden.</p>
+            </fieldset>
             <div class="form-actions">
               <button type="submit" class="btn btn-gold" disabled>Antrag absenden</button>
             </div>
@@ -191,10 +210,6 @@
             <h2>Wie geht es weiter?</h2>
             <p>Der Vorstand prüft deinen Antrag und entscheidet gemäss Art. 5 der Statuten über die Aufnahme. Solange der Vorstand aus zwei Mitgliedern besteht, müssen gemäss Art. 12 beide ausdrücklich zustimmen.</p>
             <p>Die Mitgliedschaft beginnt erst mit der Aufnahmebestätigung des Vorstands. Eine Eingangsbestätigung bestätigt nur den Erhalt des Antrags.</p>
-          </div>
-          <div class="aside-card">
-            <h2>Mitgliederbeiträge</h2>
-            <p>Die Höhe der Mitgliederbeiträge steht noch nicht fest. Allfällige Beiträge teilen wir dir vor einer verbindlichen Aufnahme mit.</p>
           </div>
         </aside>
       </div>

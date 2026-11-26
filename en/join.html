@@ -24,18 +24,24 @@
         <a href="index.html#themes">Themes</a>
         <a href="association.html">Association</a>
         <a href="events.html">Events</a>
-        <a href="contact.html" class="nav-contact">Contact</a>
-        <a class="nav-join" href="join.html" aria-current="page">Join us</a>
+        <div class="nav-actions">
+          <a href="contact.html" class="nav-contact">Contact</a>
+          <a class="nav-join" href="join.html" aria-current="page">Join us</a>
+        </div>
       </nav>
       <details class="mobile-menu">
         <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menu</summary>
         <nav class="mobile-links" aria-label="Mobile navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#themes">Themes</a>
-        <a href="association.html">Association</a>
-        <a href="events.html">Events</a>
-        <a class="nav-contact" href="contact.html">Contact</a>
-        <a class="nav-join" href="join.html" aria-current="page">Join us</a>
+          <div class="nav-pages">
+            <a href="index.html">Home</a>
+            <a href="index.html#themes">Themes</a>
+            <a href="association.html">Association</a>
+            <a href="events.html">Events</a>
+          </div>
+          <div class="nav-actions">
+            <a class="nav-contact" href="contact.html">Contact</a>
+            <a class="nav-join" href="join.html" aria-current="page">Join us</a>
+          </div>
         </nav>
       </details>
       <nav class="lang-switch" aria-label="Language / Sprache">
@@ -73,6 +79,11 @@
             <input type="hidden" name="_lang" value="en">
             <input type="hidden" name="_subject" value="Mitgliedschaftsantrag – Nova Tempora">
             <input type="hidden" name="_next" value="https://novatempora.ch/en/join.html?status=received">
+            <section class="join-fee" aria-labelledby="membership-cost">
+              <h3 id="membership-cost">Membership is free</h3>
+              <p><strong>CHF 0 in membership fees.</strong> There is currently no mandatory membership fee.</p>
+              <p>If you would like to support Nova Tempora and help us build our community, you can make a voluntary contribution. <strong>CHF 20 per year</strong> is a suggested amount. There is no minimum donation. Donations are optional and have no effect on admission or membership rights.</p>
+            </section>
             <fieldset class="join-group">
               <legend>Personal details</legend>
               <div class="form-grid">
@@ -181,6 +192,14 @@
                 <li><a href="privacy.html#membership">Membership privacy notice</a></li>
               </ul>
             </fieldset>
+            <fieldset class="join-group">
+              <legend>Reminder about voluntary support</legend>
+              <label class="join-option">
+                <input type="checkbox" name="support_reminder_opt_in" value="yes" aria-describedby="support-reminder-hint">
+                <span>I would like to receive information about optional ways to support Nova Tempora (no more than one reminder per year).</span>
+              </label>
+              <p id="support-reminder-hint" class="join-help support-reminder-hint">Signing up is optional. A reminder is neither a request for payment nor an invoice. You can unsubscribe at any time by emailing <a href="mailto:info@novatempora.ch">info@novatempora.ch</a>.</p>
+            </fieldset>
             <div class="form-actions">
               <button type="submit" class="btn btn-gold" disabled>Submit application</button>
             </div>
@@ -191,10 +210,6 @@
             <h2>What happens next?</h2>
             <p>The board reviews your application and decides on admission under Article 5 of the statutes. While the board has two members, both must expressly agree under Article 12.</p>
             <p>Your membership begins when the board confirms your admission. A submission receipt only confirms that we received your application.</p>
-          </div>
-          <div class="aside-card">
-            <h2>Membership fees</h2>
-            <p>Membership fees have yet to be confirmed. We’ll let you know about any fees before your admission is final.</p>
           </div>
         </aside>
       </div>
