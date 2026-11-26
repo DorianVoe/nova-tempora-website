@@ -75,26 +75,32 @@
 </div>
 <figure class="themes-visual">
 <img alt="Drei überlappende Kreise für History, Technology und Society" decoding="async" height="1086" loading="lazy" src="images/history-technology-society.webp" width="1448"/>
+<button class="sr-only" type="button" data-theme="history" aria-pressed="false" hidden>History (Diagramm)</button>
+<button class="sr-only" type="button" data-theme="technology" aria-pressed="false" hidden>Technology (Diagramm)</button>
+<button class="sr-only" type="button" data-theme="society" aria-pressed="false" hidden>Society (Diagramm)</button>
 </figure>
 </div>
-<div aria-label="Themenkarten – seitlich scrollen" class="topic-cards" role="region" tabindex="0">
-<article class="topic-card">
+<div class="topic-cards">
+<article class="topic-card" data-theme="history">
+<svg class="topic-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="images/theme-icons.svg#history"></use></svg>
 <span class="number">01 / HISTORY</span>
-<h3>Vergangenheit verstehen</h3>
+<h3><button class="topic-button" type="button" aria-pressed="false" disabled>Vergangenheit verstehen</button></h3>
 <p>Geschichte entdecken, Entwicklungen einordnen und die Gegenwart aus neuen Perspektiven betrachten.</p>
 </article>
-<article class="topic-card">
+<article class="topic-card" data-theme="technology">
+<svg class="topic-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="images/theme-icons.svg#technology"></use></svg>
 <span class="number">02 / TECHNOLOGY</span>
-<h3>Zukunft erkunden</h3>
+<h3><button class="topic-button" type="button" aria-pressed="false" disabled>Zukunft erkunden</button></h3>
 <p>Technologien verstehen, Chancen und Herausforderungen diskutieren und Entwicklungen kritisch begleiten.</p>
 </article>
-<article class="topic-card">
+<article class="topic-card" data-theme="society">
+<svg class="topic-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="images/theme-icons.svg#society"></use></svg>
 <span class="number">03 / SOCIETY</span>
-<h3>Menschen verbinden</h3>
+<h3><button class="topic-button" type="button" aria-pressed="false" disabled>Menschen verbinden</button></h3>
 <p>Ideen austauschen, gesellschaftliche Zusammenhänge erkennen und unterschiedliche Sichtweisen zusammenbringen.</p>
 </article>
 </div>
-<p aria-hidden="true" class="swipe-cue">Weitere Karten <span>→</span> seitlich wischen</p>
+<script src="theme-interaction.js" defer></script>
 </div>
 </section>
 <section aria-labelledby="verein-teaser-titel" class="section band">
