@@ -26,31 +26,6 @@
 }
 .lang-switch a:hover { color: var(--gold); }
 .lang-switch span { color: var(--gold); }
-.site-header a.nav-join {
-  justify-content: center;
-  padding: 10px 16px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: var(--gold);
-  color: #0c2535;
-  font-weight: 750;
-  transition: background-color .2s ease, box-shadow .2s ease;
-}
-.site-header a.nav-join[aria-current="page"] { background: var(--gold-soft); }
-.site-header a.nav-join:hover {
-  background: var(--gold-soft);
-  box-shadow: 0 3px 12px rgba(235, 189, 112, .22);
-}
-.site-header .nav-join:focus-visible { outline-offset: 3px; }
-.mobile-links a.nav-contact {
-  justify-content: center;
-  border: 1px solid rgba(235, 189, 112, .65);
-  color: var(--gold);
-}
-.mobile-links a.nav-join { display: flex; align-items: center; min-height: 45px; margin-top: 4px; }
-@media (prefers-reduced-motion: reduce) {
-  .site-header a.nav-join { transition: none; }
-}
 .btn { text-align: center; }
 .breadcrumb { flex-wrap: wrap; }
 h1, h2, h3 { overflow-wrap: anywhere; }
@@ -203,6 +178,19 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .join-layout .contact-aside { grid-template-columns: minmax(0, 1fr); }
 .join-layout .aside-card h2 { margin-top: 0; }
 .join-layout .aside-card p:last-child { margin-bottom: 0; }
+.join-fee {
+  margin: 0 0 28px;
+  padding: clamp(14px, 3vw, 22px);
+  border: 1px solid rgba(235, 189, 112, .25);
+  border-radius: 12px;
+  background: rgba(235, 189, 112, .055);
+}
+.join-fee h3 { margin-bottom: 10px; color: var(--gold-soft); }
+.join-fee p { margin-bottom: 10px; }
+.join-fee p:last-child { margin-bottom: 0; }
+.join-fee strong { color: var(--ink); }
+.support-reminder-hint { margin-top: 10px; }
+.support-reminder-hint a { color: var(--gold); }
 .join-notice {
   margin: 0 0 24px;
   padding: 12px 16px;
@@ -277,7 +265,7 @@ h1, h2, h3 { overflow-wrap: anywhere; }
   .header-inner { gap: 16px; }
   .desktop-nav { gap: 12px; }
   .desktop-nav a { font-size: .875rem; }
-  .desktop-nav .nav-contact, .site-header .desktop-nav .nav-join { padding-inline: 12px; }
+  .desktop-nav .nav-actions a { padding-inline: 12px; }
 }
 @media (max-width: 940px) {
   .desktop-nav { display: none; }
@@ -286,7 +274,7 @@ h1, h2, h3 { overflow-wrap: anywhere; }
   .header-inner { gap: 10px; }
   .brand { flex: 0 1 auto; min-width: 0; order: 1; }
   .lang-switch { order: 2; margin-left: auto; }
-  .mobile-links { max-height: calc(100dvh - 106px); overflow-y: auto; }
+  .mobile-links { max-height: calc(100vh - 106px); max-height: calc(100dvh - 106px); }
 }
 @media (max-width: 760px) {
   .event-spotlight { align-items: flex-start; flex-direction: column; }
