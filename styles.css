@@ -88,15 +88,86 @@ p { color: var(--muted); }
 /* Themes */
 .themes { border-top: 1px solid var(--line); background: linear-gradient(180deg,rgba(23,94,135,.06),transparent 77%); }
 .themes-layout { display: grid; grid-template-columns: minmax(0,.94fr) minmax(0,1.06fr); align-items: center; gap: clamp(26px, 6vw, 76px); margin-bottom: 36px; }
-.themes-visual { overflow: hidden; background: #0c1a2b; border: 1px solid var(--line); border-radius: 19px; }
+.themes-visual { position: relative; overflow: hidden; background: #0c1a2b; border: 1px solid var(--line); border-radius: 19px; }
 .themes-visual img { width: 100%; }
+.themes-visual .sr-only { top: 50%; left: 50%; }
+.themes-visual.is-over-theme { cursor: pointer; }
+.theme-overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.theme-overlay ellipse {
+  fill: var(--theme-accent);
+  fill-opacity: .10;
+  stroke: var(--theme-accent);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 5px var(--theme-accent));
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
 .themes-copy h2 { margin: 13px 0 18px; }
 .themes-copy p { line-height: 1.85; font-size: 1.04rem; }
 .topic-cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
-.topic-card { border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(160deg,rgba(20,48,68,.94),rgba(9,28,42,.92)); padding: 30px 27px; }
-.topic-card .number { font-size: .72rem; font-weight: 800; letter-spacing: .16em; color: var(--gold); }
-.topic-card:nth-child(2) .number { color: var(--blue); }
-.topic-card:nth-child(3) .number { color: var(--mint); }
+.themes { --topic-lift: -3px; }
+.themes [data-theme="history"] { --theme-accent: var(--gold); --theme-glow: 235, 189, 112; }
+.themes [data-theme="technology"] { --theme-accent: var(--blue); --theme-glow: 117, 205, 236; }
+.themes [data-theme="society"] { --theme-accent: var(--mint); --theme-glow: 141, 218, 199; }
+.topic-card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(20,48,68,.94), rgba(9,28,42,.92));
+  padding: 30px 27px;
+  transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+}
+.topic-card .number { font-size: .72rem; font-weight: 800; letter-spacing: .16em; color: var(--theme-accent); }
+.topic-icon {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  color: var(--theme-accent);
+  transition: filter 300ms ease;
+}
+.topic-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+}
+.topic-button:not(:disabled) { cursor: pointer; }
+.topic-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  /* Counter the lift so the card's pointer target stays in its original slot. */
+  transform: translateY(calc(-1 * var(--card-offset, 0px)));
+  transition: transform 300ms ease;
+}
+.topic-button:focus-visible { outline: none; }
+.topic-button:focus-visible::after { outline: 2px solid var(--theme-accent); outline-offset: 4px; }
+.themes[data-active-theme="history"] .theme-overlay [data-theme="history"],
+.themes[data-active-theme="technology"] .theme-overlay [data-theme="technology"],
+.themes[data-active-theme="society"] .theme-overlay [data-theme="society"] { opacity: 1; }
+.themes[data-active-theme="history"] .topic-card[data-theme="history"],
+.themes[data-active-theme="technology"] .topic-card[data-theme="technology"],
+.themes[data-active-theme="society"] .topic-card[data-theme="society"] {
+  border-color: var(--theme-accent);
+  box-shadow: 0 6px 24px rgba(var(--theme-glow), .18), inset 0 0 44px rgba(var(--theme-glow), .10);
+  --card-offset: var(--topic-lift);
+  transform: translateY(var(--card-offset));
+}
+.themes[data-active-theme="history"] [data-theme="history"] .topic-icon,
+.themes[data-active-theme="technology"] [data-theme="technology"] .topic-icon,
+.themes[data-active-theme="society"] [data-theme="society"] .topic-icon {
+  filter: drop-shadow(0 0 6px rgba(var(--theme-glow), .55));
+}
+@media (prefers-reduced-motion: reduce) {
+  .themes { --topic-lift: 0px; }
+  .themes .topic-card, .themes .topic-icon, .topic-button::after, .theme-overlay ellipse { transition: none; }
+}
 .topic-card h3 { margin: 20px 0 13px; }
 .topic-card p { margin: 0; font-size: .95rem; line-height: 1.75; }
 /* About, projects and quote */
@@ -354,10 +425,10 @@ p { color: var(--muted); }
 }
 
 @media (max-width: 600px) {
-  /* Show a peek of the next card: a touch-friendly, swipeable set of topics and projects.
+  /* Show a peek of the next card in the swipeable projects and values lists.
      The remainder is still accessible by horizontal scrolling. */
   .form-card { padding-inline: 20px; }
-  .topic-cards, .project-grid, .value-grid {
+  .project-grid, .value-grid {
     display: grid;
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -374,8 +445,8 @@ p { color: var(--muted); }
     margin-inline: -20px;
     padding: 3px 20px 16px;
   }
-  .topic-card,.project-card,.value-card { scroll-snap-align: start; min-width: 0; }
-  .topic-card, .project-card {
+  .project-card,.value-card { scroll-snap-align: start; min-width: 0; }
+  .project-card {
     min-height: 225px;
     padding: 26px 24px;
     background: linear-gradient(145deg,#132e43,#0c2031);
@@ -405,7 +476,7 @@ p { color: var(--muted); }
   .hero-intro h1 { font-size: 2.12rem; }
   .page-hero h1 { font-size: 2.16rem; }
   .form-card { padding-inline: 17px; }
-  .topic-cards,.project-grid,.value-grid { margin-inline: -17px; padding-inline: 17px; }
+  .project-grid,.value-grid { margin-inline: -17px; padding-inline: 17px; }
   .privacy-aside { margin-inline: -17px; padding-inline: 17px; }
 }
 
@@ -418,7 +489,7 @@ p { color: var(--muted); }
     margin: 0; padding-top: 5px;
   }
   .swipe-cue span { font-size: 1.05rem; }
-  .topic-cards:focus-visible,.project-grid:focus-visible,.value-grid:focus-visible {
+  .project-grid:focus-visible,.value-grid:focus-visible {
     outline: 2px solid var(--gold); outline-offset: 2px;
   }
 }
