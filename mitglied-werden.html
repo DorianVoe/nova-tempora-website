@@ -21,7 +21,6 @@
       <a class="brand" href="index.html" aria-label="Nova Tempora – Startseite"><img src="images/nova-tempora-logo.webp" alt="Nova Tempora" width="2172" height="724" decoding="async"></a>
       <nav class="desktop-nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
-        <a href="index.html#themen">Themen</a>
         <a href="verein.html">Verein</a>
         <a href="veranstaltungen.html">Veranstaltungen</a>
         <div class="nav-actions">
@@ -34,7 +33,6 @@
         <nav class="mobile-links" aria-label="Mobile Navigation">
           <div class="nav-pages">
             <a href="index.html">Start</a>
-            <a href="index.html#themen">Themen</a>
             <a href="verein.html">Verein</a>
             <a href="veranstaltungen.html">Veranstaltungen</a>
           </div>
@@ -211,6 +209,24 @@
             <p>Der Vorstand prüft deinen Antrag und entscheidet gemäss Art. 5 der Statuten über die Aufnahme. Solange der Vorstand aus zwei Mitgliedern besteht, müssen gemäss Art. 12 beide ausdrücklich zustimmen.</p>
             <p>Die Mitgliedschaft beginnt erst mit der Aufnahmebestätigung des Vorstands. Eine Eingangsbestätigung bestätigt nur den Erhalt des Antrags.</p>
           </div>
+          <section class="support-panel" aria-labelledby="nova-tempora-unterstuetzen">
+            <div>
+              <h2 id="nova-tempora-unterstuetzen">Nova Tempora unterstützen</h2>
+              <p>Die Mitgliedschaft ist derzeit kostenlos (<strong>CHF 0.–</strong>). Wer unsere Arbeit und den Aufbau der Community unterstützen möchte, kann freiwillig einen Förderbeitrag leisten. <strong>CHF 20.– pro Jahr</strong> sind ein unverbindlicher Orientierungsbetrag. Es gibt keinen Mindestbetrag und keine Zahlungspflicht. Mitgliedschaft und Stimmrechte sind unabhängig von freiwilligen Beiträgen.</p>
+            </div>
+            <div class="support-bank" data-support-bank>
+              <p class="support-bank-status" data-bank-pending>Bankverbindung folgt in Kürze.</p>
+              <div data-bank-details hidden>
+                <dl class="support-bank-details">
+                  <div><dt>Kontoinhaber</dt><dd data-bank-field="accountHolder"></dd></div>
+                  <div><dt>Bank</dt><dd data-bank-field="bank"></dd></div>
+                  <div><dt>IBAN</dt><dd class="support-iban" data-bank-field="iban"></dd></div>
+                  <div><dt>Zahlungszweck</dt><dd data-bank-field="paymentReference"></dd></div>
+                </dl>
+                <div class="support-bank-qr" data-bank-qr data-image-alt="Swiss-QR-Zahlteil für freiwillige Förderbeiträge an Nova Tempora" hidden></div>
+              </div>
+            </div>
+          </section>
         </aside>
       </div>
     </section>
@@ -230,5 +246,6 @@
       </nav>
     </div>
   </footer>
+<script src="support-bank.js" defer></script>
 </body>
 </html>

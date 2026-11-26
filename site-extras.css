@@ -178,6 +178,41 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .join-layout .contact-aside { grid-template-columns: minmax(0, 1fr); }
 .join-layout .aside-card h2 { margin-top: 0; }
 .join-layout .aside-card p:last-child { margin-bottom: 0; }
+.support-section { margin-block: clamp(28px, 5vw, 60px); }
+.support-panel {
+  display: grid;
+  gap: clamp(16px, 3vw, 30px);
+  padding: clamp(18px, 3.5vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #10263a;
+}
+.support-panel h2 {
+  margin: 0 0 12px;
+  color: var(--gold-soft);
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+}
+.support-panel p { margin-bottom: 0; }
+.support-panel strong { color: var(--ink); }
+.support-bank {
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(235, 189, 112, .22);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  background: rgba(235, 189, 112, .05);
+}
+.support-bank-status { color: var(--gold-soft); }
+.support-bank-details { display: grid; gap: 9px; margin: 0; }
+.support-bank-details div { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); gap: 8px; }
+.support-bank-details dt { color: var(--muted); }
+.support-bank-details dd { margin: 0; overflow-wrap: anywhere; }
+.support-iban { font-variant-numeric: tabular-nums; }
+.support-bank-qr { margin-top: 16px; }
+.support-bank-qr img { max-width: 100%; height: auto; }
+@media (min-width: 761px) {
+  .support-panel-wide { grid-template-columns: minmax(0, 1.7fr) minmax(230px, 1fr); align-items: center; }
+}
 .join-fee {
   margin: 0 0 28px;
   padding: clamp(14px, 3vw, 22px);
