@@ -1,6 +1,14 @@
 # nova-tempora-website
 Official website of Nova Tempora – History, Technology &amp; Society
 
+## CSS-Cache bei Veröffentlichungen
+
+Die aktiven HTML-Seiten binden `styles.css` und `site-extras.css` mit
+`?v=` und einem kurzen Inhalts-Hash ein. Nach CSS-Änderungen die ersten zwölf
+Zeichen des SHA-256-Hashes der betreffenden Datei in den zugehörigen Links
+aller Sprachseiten aktualisieren. So laden die neuen HTML-Seiten das neue
+CSS auch dann, wenn die alte URL noch im Browsercache liegt.
+
 ## Online-Mitgliedschaft
 
 `mitglied-werden.html` und `en/join.html` senden UTF-8-kodierte Anträge per
