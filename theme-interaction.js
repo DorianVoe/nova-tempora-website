@@ -2,20 +2,22 @@
   const section = document.querySelector('.themes');
   const diagram = section.querySelector('.themes-visual');
   const image = diagram.querySelector('img');
+  const imageWidth = Number(image.getAttribute('width'));
+  const imageHeight = Number(image.getAttribute('height'));
   const cards = [...section.querySelectorAll('.topic-card')];
   const hotspots = [...diagram.querySelectorAll('button')];
 
-  // The original 1448 × 1086 artwork uses slightly elliptical outlines.
+  // The 1254 × 1254 artwork uses slightly elliptical outlines.
   // Use the same measured coordinates for pointer hit testing and the glow.
   const circles = {
-    history: { cx: 713, cy: 335, rx: 333, ry: 313 },
-    technology: { cx: 449, cy: 696, rx: 318, ry: 310 },
-    society: { cx: 972, cy: 696, rx: 321, ry: 310 }
+    history: { cx: 623, cy: 395, rx: 299, ry: 306 },
+    technology: { cx: 401, cy: 770, rx: 293, ry: 293 },
+    society: { cx: 844, cy: 770, rx: 293, ry: 293 }
   };
   const svgNamespace = 'http://www.w3.org/2000/svg';
   const overlay = document.createElementNS(svgNamespace, 'svg');
   overlay.setAttribute('class', 'theme-overlay');
-  overlay.setAttribute('viewBox', '0 0 1448 1086');
+  overlay.setAttribute('viewBox', `0 0 ${imageWidth} ${imageHeight}`);
   overlay.setAttribute('aria-hidden', 'true');
   for (const [theme, geometry] of Object.entries(circles)) {
     const ellipse = document.createElementNS(svgNamespace, 'ellipse');
@@ -54,8 +56,8 @@
 
   function themeAt(event) {
     const bounds = image.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width * 1448;
-    const y = (event.clientY - bounds.top) / bounds.height * 1086;
+    const x = (event.clientX - bounds.left) / bounds.width * imageWidth;
+    const y = (event.clientY - bounds.top) / bounds.height * imageHeight;
     const matches = Object.entries(circles).filter(([, { cx, cy, rx, ry }]) =>
       ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1
     );
