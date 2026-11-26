@@ -14,3 +14,17 @@ Formulars. Die Aufnahme bestätigt der Vorstand separat per E-Mail.
 
 Die [Form.taxi-Dokumentation](https://docs.form.taxi/en/functional-fields)
 erklärt beide Formularfelder.
+
+## Bankverbindung für freiwillige Förderbeiträge
+
+Die Einstellungen in `support-bank.js` gelten für die Vereins- und Anmeldeseiten
+in beiden Sprachen. Bis zur Freigabe steht dort nur «Bankverbindung folgt in Kürze.».
+
+1. `accountHolder` und `bank` anhand der Kontoeröffnungsunterlagen prüfen und
+   die bestätigte Schweizer IBAN in `iban` eintragen. `paymentReference` enthält
+   den Zahlungszweck auf Deutsch und Englisch.
+2. Optional den geprüften Swiss-QR-Zahlteil als Bild im Ordner `images/` ablegen
+   und den Pfad ab der Website-Wurzel ohne führenden Schrägstrich in `qrImage`
+   eintragen. Ohne Eintrag werden nur die Bankdaten angezeigt.
+3. Erst nach Prüfung aller Angaben `confirmed` auf `true` setzen. Die Karte auf
+   allen vier Seiten vor der Veröffentlichung kontrollieren.
