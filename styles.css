@@ -54,8 +54,8 @@ p { color: var(--muted); }
 .brand { display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none; }
 .brand img { width: 208px; height: 69px; object-fit: contain; object-position: left center; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(16px, 2.3vw, 34px); }
-.desktop-nav a { position: relative; display: inline-flex; align-items: center; text-decoration: none; font-size: .9rem; font-weight: 550; color: #d5e2ea; transition: color .18s ease; }
-.desktop-nav a:not(.nav-contact)::after { content: ''; position: absolute; inset: auto 0 -8px; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .18s ease; }
+.desktop-nav a { position: relative; display: inline-flex; align-items: center; white-space: nowrap; text-decoration: none; font-size: .9rem; font-weight: 550; color: #d5e2ea; transition: color .18s ease; }
+.desktop-nav a:not(.nav-contact):not(.nav-join)::after { content: ''; position: absolute; inset: auto 0 -8px; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .18s ease; }
 .desktop-nav a:hover,.desktop-nav a[aria-current="page"] { color: var(--gold); }
 .desktop-nav a:hover::after,.desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
 .desktop-nav .nav-contact { border: 1px solid rgba(235,189,112,.65); padding: 10px 18px; border-radius: 999px; color: var(--gold); }

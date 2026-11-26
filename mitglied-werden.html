@@ -23,9 +23,9 @@
         <a href="index.html">Start</a>
         <a href="index.html#themen">Themen</a>
         <a href="verein.html">Verein</a>
-        <a href="index.html#projekte">Projekte</a>
         <a href="veranstaltungen.html">Veranstaltungen</a>
         <a href="kontakt.html" class="nav-contact">Kontakt</a>
+        <a class="nav-join" href="mitglied-werden.html" aria-current="page">Mitglied werden</a>
       </nav>
       <details class="mobile-menu">
         <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menü</summary>
@@ -33,9 +33,9 @@
         <a href="index.html">Start</a>
         <a href="index.html#themen">Themen</a>
         <a href="verein.html">Verein</a>
-        <a href="index.html#projekte">Projekte</a>
         <a href="veranstaltungen.html">Veranstaltungen</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a class="nav-contact" href="kontakt.html">Kontakt</a>
+        <a class="nav-join" href="mitglied-werden.html" aria-current="page">Mitglied werden</a>
         </nav>
       </details>
       <nav class="lang-switch" aria-label="Sprache / Language">
@@ -63,15 +63,16 @@
         <div class="form-card">
           <h2 id="application-title">Mitgliedschaftsantrag</h2>
           <p id="join-required" class="form-intro">Mit * markierte Felder sind Pflichtfelder.</p>
-          <p id="join-unavailable" class="join-notice">Online-Anträge können derzeit noch nicht übermittelt werden. Bei Fragen zur Mitgliedschaft kannst du uns <a href="kontakt.html">kontaktieren</a>.</p>
+          <p id="join-receipt" class="join-notice" tabindex="-1" hidden><strong>Antrag eingegangen.</strong> Danke für deinen Mitgliedschaftsantrag. Der Vorstand prüft ihn und teilt dir seinen Entscheid separat per E-Mail mit.</p>
           <noscript><p class="join-notice">Für die Online-Anmeldung muss JavaScript aktiviert sein.</p></noscript>
-          <form id="membership-form" method="post" accept-charset="UTF-8" aria-describedby="join-required join-unavailable"
+          <form id="membership-form" method="post" accept-charset="UTF-8" aria-describedby="join-required"
             data-error-required="Bitte fülle dieses Pflichtfeld aus."
             data-error-type="Bitte wähle einen Mitgliedschaftstyp."
             data-error-email="Bitte gib eine gültige E-Mail-Adresse ein."
             data-error-checkbox="Bitte bestätige diese Angabe.">
             <input type="hidden" name="_lang" value="de">
             <input type="hidden" name="_subject" value="Mitgliedschaftsantrag – Nova Tempora">
+            <input type="hidden" name="_next" value="https://novatempora.ch/mitglied-werden.html?status=received">
             <fieldset class="join-group">
               <legend>Persönliche Angaben</legend>
               <div class="form-grid">
