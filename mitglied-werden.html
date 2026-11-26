@@ -10,11 +10,11 @@
   <link rel="alternate" hreflang="de-CH" href="https://novatempora.ch/mitglied-werden.html">
   <link rel="alternate" hreflang="en" href="https://novatempora.ch/en/join.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="site-extras.css">
+  <link rel="stylesheet" href="styles.css?v=00db4f6b1b20">
+  <link rel="stylesheet" href="site-extras.css?v=88a726e234c5">
   <script src="membership.js" defer></script>
 </head>
-<body>
+<body id="seitenanfang">
   <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
   <header class="site-header">
     <div class="container header-inner">
@@ -28,8 +28,13 @@
           <a class="nav-join" href="mitglied-werden.html" aria-current="page">Mitglied werden</a>
         </div>
       </nav>
+      <nav class="lang-switch" aria-label="Sprache / Language">
+        <a href="mitglied-werden.html" lang="de-CH" hreflang="de-CH" aria-current="page">DE</a>
+        <span aria-hidden="true">/</span>
+        <a href="en/join.html" lang="en" hreflang="en">EN</a>
+      </nav>
       <details class="mobile-menu">
-        <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menü</summary>
+        <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menü</span></summary>
         <nav class="mobile-links" aria-label="Mobile Navigation">
           <div class="nav-pages">
             <a href="index.html">Start</a>
@@ -42,11 +47,6 @@
           </div>
         </nav>
       </details>
-      <nav class="lang-switch" aria-label="Sprache / Language">
-        <a href="mitglied-werden.html" lang="de-CH" hreflang="de-CH" aria-current="page">DE</a>
-        <span aria-hidden="true">/</span>
-        <a href="en/join.html" lang="en" hreflang="en">EN</a>
-      </nav>
     </div>
   </header>
   <main id="inhalt" tabindex="-1">
@@ -236,6 +236,7 @@
         <a href="datenschutz.html">Datenschutz</a>
         <a href="mailto:info@novatempora.ch">E-Mail</a>
       </nav>
+<a class="back-to-top" href="#seitenanfang" aria-label="Zurück nach oben"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </footer>
 <script src="support-bank.js" defer></script>

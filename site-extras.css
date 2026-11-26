@@ -305,6 +305,8 @@
 @media (max-width: 760px) {
   .event-spotlight { align-items: stretch; flex-direction: column; gap: 16px; }
   .event-spotlight .btn { width: 100%; }
+  .event-spotlight h3,.event-feature h3,.event-archive-copy h3 { font-size: 1.3rem; }
+  .event-feature p,.event-archive-copy p,.event-spotlight p { line-height: 1.6; }
   .privacy-section { padding: 28px 0 46px; }
   .privacy-aside {
     padding: 9px;
@@ -320,10 +322,11 @@
   .statutes-content h3 { font-size: 1.2rem; line-height: 1.3; margin: 23px 0 9px; scroll-margin-top: 0; }
   .statutes-content p { line-height: 1.7; }
   .statutes-notice { padding: 16px; margin-bottom: 24px; }
+  .join-option,.join-help { font-size: 1rem; line-height: 1.6; }
+  .join-option span,.join-option label { min-width: 0; overflow-wrap: break-word; }
+  .join-documents a { display: inline-flex; align-items: center; min-height: 44px; }
 }
 @media (max-width: 560px) {
-  .mobile-menu summary { padding-inline: 8px; }
-  .menu-bars i { width: 15px; }
   .event-details { gap: 10px; }
   .event-details div { grid-template-columns: minmax(0, 1fr); gap: 1px; line-height: 1.5; }
   .support-bank-details div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
