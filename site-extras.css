@@ -223,8 +223,6 @@
 .join-fee p { margin-bottom: 10px; }
 .join-fee p:last-child { margin-bottom: 0; }
 .join-fee strong { color: var(--ink); }
-.support-reminder-hint { margin-top: 10px; }
-.support-reminder-hint a { color: var(--gold); }
 .join-notice {
   margin: 0 0 24px;
   padding: 12px 16px;
