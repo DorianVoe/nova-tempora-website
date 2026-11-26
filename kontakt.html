@@ -1,133 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="de-CH">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
-  <meta name="theme-color" content="#071321">
-  <meta name="description" content="Kontakt zu Nova Tempora: Fragen, Ideen, Zusammenarbeit oder Interesse am Verein? Schreib uns über das Kontaktformular.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Kontakt | Nova Tempora">
-  <meta property="og:description" content="Schreib uns – Nova Tempora, History, Technology, Society.">
-  <meta property="og:image" content="https://novatempora.ch/images/nova-tempora-hero.webp">
-  <link rel="canonical" href="https://novatempora.ch/kontakt.html">
-  <link rel="icon" href="images/nova-tempora-logo.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
-  <title>Kontakt | Nova Tempora</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#071321" name="theme-color"/>
+<meta content="Kontakt zu Nova Tempora: Fragen, Ideen, Zusammenarbeit oder Interesse am Verein? Schreib uns über das Kontaktformular." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Kontakt | Nova Tempora" property="og:title"/>
+<meta content="Schreib uns – Nova Tempora, History, Technology, Society." property="og:description"/>
+<meta content="https://novatempora.ch/images/nova-tempora-hero.webp" property="og:image"/>
+<link href="https://novatempora.ch/kontakt.html" rel="canonical"/>
+<link href="images/nova-tempora-logo.webp" rel="icon" type="image/webp"/>
+<link href="styles.css" rel="stylesheet"/>
+<title>Kontakt | Nova Tempora</title>
+<link href="site-extras.css" rel="stylesheet"/>
+<link href="https://novatempora.ch/kontakt.html" hreflang="de-CH" rel="alternate"/>
+<link href="https://novatempora.ch/en/contact.html" hreflang="en" rel="alternate"/>
 </head>
 <body>
-  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Nova Tempora – Startseite">
-        <img src="images/nova-tempora-logo.png" alt="Nova Tempora" width="2048" height="682" decoding="async">
-      </a>
-      <nav class="desktop-nav" aria-label="Hauptnavigation">
-        <a href="index.html">Start</a>
-        <a href="index.html#themen">Themen</a>
-        <a href="verein.html">Verein</a>
-        <a href="index.html#projekte">Projekte</a>
-        <a class="nav-contact" href="kontakt.html" aria-current="page">Kontakt</a>
-      </nav>
-      <details class="mobile-menu">
-        <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menü</summary>
-        <nav class="mobile-links" aria-label="Mobile Navigation">
-          <a href="index.html">Start</a>
-          <a href="index.html#themen">Themen</a>
-          <a href="verein.html">Verein</a>
-          <a href="index.html#projekte">Projekte</a>
-          <a href="kontakt.html" aria-current="page">Kontakt</a>
-        </nav>
-      </details>
-    </div>
-  </header>
-  <main id="inhalt">
-    <section class="page-hero" aria-labelledby="seiten-titel">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Brotkrumennavigation"><a href="index.html">Start</a><span aria-hidden="true">/</span><span>Kontakt</span></nav>
-        <span class="eyebrow">Nova Tempora · Im Dialog</span>
-        <h1 id="seiten-titel">Ideen beginnen mit einem Gespräch.</h1>
-        <p>Du hast Fragen zum Verein, möchtest dich einbringen oder eine Zusammenarbeit vorschlagen? Wir freuen uns, von dir zu hören.</p>
-      </div>
-    </section>
-    <section class="contact-section" aria-label="Kontaktmöglichkeiten">
-      <div class="container contact-layout">
-        <div class="form-card">
-          <h2>Schreib uns eine Nachricht</h2>
-          <p class="form-intro">Fülle das Formular aus. Wir melden uns über die angegebene E-Mail-Adresse bei dir.</p>
-          <form action="https://form.taxi/s/eukktt74" method="POST" accept-charset="UTF-8">
-            <input type="hidden" name="_subject" value="Neue Kontaktanfrage – Nova Tempora">
-            <input type="hidden" name="_lang" value="de">
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Dein Name <span class="required" aria-label="Pflichtfeld">*</span></label>
-                <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required placeholder="Vor- und Nachname">
-              </div>
-              <div class="field">
-                <label for="email">E-Mail-Adresse <span class="required" aria-label="Pflichtfeld">*</span></label>
-                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" maxlength="254" required placeholder="name@beispiel.ch">
-              </div>
-              <div class="field full">
-                <label for="betreff">Worum geht es? <span class="required" aria-label="Pflichtfeld">*</span></label>
-                <select id="betreff" name="betreff" required>
-                  <option value="" disabled selected>Bitte Thema auswählen</option>
-                  <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
-                  <option value="Mitgliedschaft">Mitgliedschaft</option>
-                  <option value="Zusammenarbeit">Zusammenarbeit</option>
-                  <option value="Projekte und Veranstaltungen">Projekte und Veranstaltungen</option>
-                  <option value="Anderes Anliegen">Anderes Anliegen</option>
-                </select>
-              </div>
-              <div class="field full">
-                <label for="message">Deine Nachricht <span class="required" aria-label="Pflichtfeld">*</span></label>
-                <textarea id="message" name="message" required maxlength="5000" placeholder="Deine Nachricht an Nova Tempora ..."></textarea>
-              </div>
-            </div>
-            <p class="form-note">Deine Angaben werden zur Beantwortung deiner Anfrage über den Formulardienst <a href="https://form.taxi/de/privacy" target="_blank" rel="noopener noreferrer">Form.taxi</a> verarbeitet und an uns übermittelt. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>. Bitte keine vertraulichen oder besonders schützenswerten Daten eingeben. <span aria-hidden="true">*</span> Pflichtfelder.</p>
-            <div class="form-actions">
-              <button class="btn btn-gold" type="submit">Nachricht senden <span aria-hidden="true">↗</span></button>
-              <small>Antworten an deine E-Mail-Adresse</small>
-            </div>
-          </form>
-        </div>
-        <aside class="contact-aside" aria-label="Weitere Informationen">
-          <div class="aside-card">
-            <span class="eyebrow">Direkter Kontakt</span>
-            <h2>Lieber per E-Mail?</h2>
-            <p>Schreib uns gerne auch direkt – ganz ohne Formular.</p>
-            <a href="mailto:info@novatempora.ch">info@novatempora.ch</a>
-          </div>
-          <div class="aside-card">
-            <span class="eyebrow">Vereinsdomizil</span>
-            <h2>Postanschrift</h2>
-            <address class="postal-address">
-              <strong>Nova Tempora</strong><br>
-              c/o Admir Berisha<br>
-              Laubeggstrasse 18<br>
-              3006 Bern<br>
+<a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Nova Tempora – Startseite" class="brand" href="index.html">
+<img alt="Nova Tempora" decoding="async" height="724" src="images/nova-tempora-logo.webp" width="2172"/>
+</a>
+<nav aria-label="Hauptnavigation" class="desktop-nav">
+<a href="index.html">Start</a>
+<a href="index.html#themen">Themen</a>
+<a href="verein.html">Verein</a>
+<a href="index.html#projekte">Projekte</a><a href="veranstaltungen.html">Veranstaltungen</a>
+<a aria-current="page" class="nav-contact" href="kontakt.html">Kontakt</a>
+</nav>
+<details class="mobile-menu">
+<summary><span aria-hidden="true" class="menu-bars"><i></i><i></i><i></i></span> Menü</summary>
+<nav aria-label="Mobile Navigation" class="mobile-links">
+<a href="index.html">Start</a>
+<a href="index.html#themen">Themen</a>
+<a href="verein.html">Verein</a>
+<a href="index.html#projekte">Projekte</a><a href="veranstaltungen.html">Veranstaltungen</a>
+<a aria-current="page" href="kontakt.html">Kontakt</a>
+</nav>
+</details>
+<nav class="lang-switch" aria-label="Sprache / Language"><a aria-current="page" href="kontakt.html" lang="de-CH">DE</a><span aria-hidden="true">/</span><a href="en/contact.html" hreflang="en" lang="en">EN</a>
+</nav></div>
+</header>
+<main id="inhalt" tabindex="-1">
+<section aria-labelledby="seiten-titel" class="page-hero">
+<div class="container">
+<nav aria-label="Brotkrumennavigation" class="breadcrumb"><a href="index.html">Start</a><span aria-hidden="true">/</span><span>Kontakt</span>
+</nav>
+<span class="eyebrow">Nova Tempora · Im Dialog</span>
+<h1 id="seiten-titel">Ideen beginnen mit einem Gespräch.</h1>
+<p>Du hast Fragen zum Verein, möchtest dich einbringen oder eine Zusammenarbeit vorschlagen? Wir freuen uns, von dir zu hören.</p>
+</div>
+</section>
+<section aria-label="Kontaktmöglichkeiten" class="contact-section">
+<div class="container contact-layout">
+<div class="form-card">
+<h2>Schreib uns eine Nachricht</h2>
+<p class="form-intro">Fülle das Formular aus. Wir melden uns über die angegebene E-Mail-Adresse bei dir.</p>
+<form accept-charset="UTF-8" action="https://form.taxi/s/eukktt74" method="POST">
+<input name="_subject" type="hidden" value="Neue Kontaktanfrage – Nova Tempora"/>
+<input name="_lang" type="hidden" value="de"/>
+<div class="form-grid">
+<div class="field">
+<label for="name">Dein Name <span aria-label="Pflichtfeld" class="required">*</span></label>
+<input autocomplete="name" id="name" maxlength="120" name="name" placeholder="Vor- und Nachname" required="" type="text"/>
+</div>
+<div class="field">
+<label for="email">E-Mail-Adresse <span aria-label="Pflichtfeld" class="required">*</span></label>
+<input autocomplete="email" id="email" maxlength="254" name="email" placeholder="name@beispiel.ch" required="" type="email"/>
+</div>
+<div class="field full">
+<label for="betreff">Worum geht es? <span aria-label="Pflichtfeld" class="required">*</span></label>
+<select id="betreff" name="betreff" required="">
+<option disabled="" selected="" value="">Bitte Thema auswählen</option>
+<option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
+<option value="Mitgliedschaft">Mitgliedschaft</option>
+<option value="Zusammenarbeit">Zusammenarbeit</option>
+<option value="Projekte und Veranstaltungen">Projekte und Veranstaltungen</option>
+<option value="Anderes Anliegen">Anderes Anliegen</option>
+</select>
+</div>
+<div class="field full">
+<label for="message">Deine Nachricht <span aria-label="Pflichtfeld" class="required">*</span></label>
+<textarea id="message" maxlength="5000" name="message" placeholder="Deine Nachricht an Nova Tempora ..." required=""></textarea>
+</div>
+</div>
+<p class="form-note">Deine Angaben werden zur Beantwortung deiner Anfrage über den Formulardienst <a href="https://form.taxi/de/privacy" rel="noopener noreferrer" target="_blank">Form.taxi</a> verarbeitet und an uns übermittelt. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>. Bitte keine vertraulichen oder besonders schützenswerten Daten eingeben. <span aria-hidden="true">*</span> Pflichtfelder.</p>
+<div class="form-actions">
+<button class="btn btn-gold" type="submit">Nachricht senden</button>
+<small>Antworten an deine E-Mail-Adresse</small>
+</div>
+</form>
+</div>
+<aside aria-label="Weitere Informationen" class="contact-aside">
+<div class="aside-card">
+<span class="eyebrow">Direkter Kontakt</span>
+<h2>Lieber per E-Mail?</h2>
+<p>Schreib uns gerne auch direkt – ganz ohne Formular.</p>
+<a href="mailto:info@novatempora.ch">info@novatempora.ch</a>
+</div>
+<div class="aside-card">
+<span class="eyebrow">Vereinsdomizil</span>
+<h2>Postanschrift</h2>
+<address class="postal-address">
+<strong>Nova Tempora</strong><br/>
+              c/o Admir Berisha<br/>
+              Laubeggstrasse 18<br/>
+              3006 Bern<br/>
               Schweiz
             </address>
-          </div>
-          <div class="aside-card">
-            <span class="eyebrow">History · Technology · Society</span>
-            <h2>Worüber wir uns freuen</h2>
-            <ul>
-              <li>Fragen zum Verein und zur Community</li>
-              <li>Ideen und Themenvorschläge</li>
-              <li>Interesse an Mitgliedschaft oder Austausch</li>
-              <li>Anfragen zu gemeinsamen Projekten</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="footer-small">© 2026 Nova Tempora · History · Technology · Society</span>
-      <nav class="footer-nav" aria-label="Footernavigation">
-        <a href="index.html">Start</a><a href="verein.html">Verein</a><a href="kontakt.html">Kontakt</a><a href="datenschutz.html">Datenschutz</a><a href="mailto:info@novatempora.ch">E-Mail</a>
-      </nav>
-    </div>
-  </footer>
+</div>
+<div class="aside-card">
+<span class="eyebrow">History · Technology · Society</span>
+<h2>Worüber wir uns freuen</h2>
+<ul>
+<li>Fragen zum Verein und zur Community</li>
+<li>Ideen und Themenvorschläge</li>
+<li>Interesse an Mitgliedschaft oder Austausch</li>
+<li>Anfragen zu gemeinsamen Projekten</li>
+</ul>
+</div>
+</aside>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<span class="footer-small">© 2026 Nova Tempora · History · Technology · Society</span>
+<nav aria-label="Footernavigation" class="footer-nav">
+<a href="index.html">Start</a>
+<a href="verein.html">Verein</a>
+<a href="veranstaltungen.html">Veranstaltungen</a>
+<a href="kontakt.html" aria-current="page">Kontakt</a>
+<a href="statuten.html">Statuten</a>
+<a href="datenschutz.html">Datenschutz</a>
+<a href="mailto:info@novatempora.ch">E-Mail</a>
+</nav>
+</div>
+</footer>
 </body>
 </html>
