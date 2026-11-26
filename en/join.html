@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071321">
+  <meta name="description" content="Apply to join Nova Tempora as an individual or an organisation.">
+  <title>Become a member | Nova Tempora</title>
+  <link rel="canonical" href="https://novatempora.ch/en/join.html">
+  <link rel="alternate" hreflang="de-CH" href="https://novatempora.ch/mitglied-werden.html">
+  <link rel="alternate" hreflang="en" href="https://novatempora.ch/en/join.html">
+  <link rel="icon" href="../images/nova-tempora-logo.webp" type="image/webp">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../site-extras.css">
+  <script src="../membership.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Nova Tempora – home"><img src="../images/nova-tempora-logo.webp" alt="Nova Tempora" width="2172" height="724" decoding="async"></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#themes">Themes</a>
+        <a href="association.html">Association</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html" class="nav-contact">Contact</a>
+      </nav>
+      <details class="mobile-menu">
+        <summary><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menu</summary>
+        <nav class="mobile-links" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#themes">Themes</a>
+        <a href="association.html">Association</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        </nav>
+      </details>
+      <nav class="lang-switch" aria-label="Language / Sprache">
+        <a href="../mitglied-werden.html" lang="de-CH" hreflang="de-CH">DE</a>
+        <span aria-hidden="true">/</span>
+        <a href="join.html" lang="en" hreflang="en" aria-current="page">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main id="inhalt" tabindex="-1">
+    <section class="page-hero" aria-labelledby="join-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span aria-hidden="true">/</span>
+          <a href="association.html">Association</a><span aria-hidden="true">/</span>
+          <span aria-current="page">Become a member</span>
+        </nav>
+        <span class="eyebrow">Nova Tempora · Membership</span>
+        <h1 id="join-title">Become a member</h1>
+        <p>Apply as an individual or as an organisation and help shape the conversation about history, technology and society.</p>
+      </div>
+    </section>
+    <section class="contact-section" aria-labelledby="application-title">
+      <div class="container contact-layout join-layout">
+        <div class="form-card">
+          <h2 id="application-title">Membership application</h2>
+          <p id="join-required" class="form-intro">Fields marked with * are required.</p>
+          <p id="join-unavailable" class="join-notice">Online applications are not yet open. If you have a question about membership, <a href="contact.html">contact us</a>.</p>
+          <noscript><p class="join-notice">JavaScript is required to apply online.</p></noscript>
+          <form id="membership-form" method="post" accept-charset="UTF-8" aria-describedby="join-required join-unavailable"
+            data-error-required="Please complete this required field."
+            data-error-type="Please select a membership type."
+            data-error-email="Please enter a valid email address."
+            data-error-checkbox="Please tick this box to confirm.">
+            <input type="hidden" name="_lang" value="en">
+            <input type="hidden" name="_subject" value="Mitgliedschaftsantrag – Nova Tempora">
+            <fieldset class="join-group">
+              <legend>Personal details</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="first_name">First name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="first_name" name="first_name" autocomplete="given-name" maxlength="100" required pattern=".*\S.*">
+                </div>
+                <div class="field">
+                  <label for="last_name">Last name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="last_name" name="last_name" autocomplete="family-name" maxlength="100" required pattern=".*\S.*">
+                </div>
+                <div class="field">
+                  <label for="email">Email address <span class="required" aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
+                </div>
+                <div class="field">
+                  <label for="membership_type">Membership type <span class="required" aria-hidden="true">*</span></label>
+                  <select id="membership_type" name="membership_type" required>
+                    <option value="" selected disabled>Please select</option>
+                    <option value="individual">Individual</option>
+                    <option value="organisation">Organisation</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset id="organisation-fields" class="join-group" hidden disabled>
+              <legend>Organisation details</legend>
+              <p class="join-help">Tell us who will represent the organisation in the association.</p>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="organisation_name">Organisation name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="organisation_name" name="organisation_name" autocomplete="organization" maxlength="150" required pattern=".*\S.*">
+                </div>
+                <div class="field">
+                  <label for="organisation_representative">Representative’s full name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="organisation_representative" name="organisation_representative" autocomplete="section-representative name" maxlength="150" required pattern=".*\S.*">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="join-group">
+              <legend>Postal address <span class="join-optional">Optional</span></legend>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="street_address">Street and house number</label>
+                  <input type="text" id="street_address" name="street_address" autocomplete="address-line1" maxlength="160">
+                </div>
+                <div class="field">
+                  <label for="postal_code">Postcode</label>
+                  <input type="text" id="postal_code" name="postal_code" autocomplete="postal-code" maxlength="24">
+                </div>
+                <div class="field">
+                  <label for="city">City or town</label>
+                  <input type="text" id="city" name="city" autocomplete="address-level2" maxlength="100">
+                </div>
+                <div class="field full">
+                  <label for="country">Country</label>
+                  <input type="text" id="country" name="country" autocomplete="country-name" maxlength="100">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="join-group">
+              <legend>Interests <span class="join-optional">Optional</span></legend>
+              <p class="join-help">Select as many as you like.</p>
+              <div class="join-options">
+          <label class="join-option"><input type="checkbox" name="interest_history" value="yes"><span>History</span></label>
+          <label class="join-option"><input type="checkbox" name="interest_technology" value="yes"><span>Technology, AI and emerging technologies</span></label>
+          <label class="join-option"><input type="checkbox" name="interest_society" value="yes"><span>Society</span></label>
+          <label class="join-option"><input type="checkbox" name="interest_networking" value="yes"><span>Networking</span></label>
+          <label class="join-option"><input type="checkbox" name="interest_interdisciplinary_projects" value="yes"><span>Interdisciplinary projects</span></label>
+          <label class="join-option"><input type="checkbox" name="interest_other" value="yes"><span>Other topics</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="join-group">
+              <legend>Ways to get involved <span class="join-optional">Optional</span></legend>
+              <p class="join-help">Select as many as you like.</p>
+              <div class="join-options">
+          <label class="join-option"><input type="checkbox" name="contribution_attend_events" value="yes"><span>Attend events</span></label>
+          <label class="join-option"><input type="checkbox" name="contribution_give_talks_or_workshops" value="yes"><span>Give talks or lead workshops</span></label>
+          <label class="join-option"><input type="checkbox" name="contribution_organise_events" value="yes"><span>Help organise events</span></label>
+          <label class="join-option"><input type="checkbox" name="contribution_share_expertise" value="yes"><span>Share expertise</span></label>
+          <label class="join-option"><input type="checkbox" name="contribution_support_projects" value="yes"><span>Support projects</span></label>
+          <label class="join-option"><input type="checkbox" name="contribution_introduce_contacts_or_partners" value="yes"><span>Introduce contacts or potential partners</span></label>
+          <label class="join-option"><input type="checkbox" name="contribution_support_communications_design_or_tech" value="yes"><span>Support communications, design or technology</span></label>
+          <label class="join-option"><input type="checkbox" name="contribution_membership_only" value="yes"><span>For now, I’d just like to be a member</span></label>
+              </div>
+              <div class="field join-message">
+                <label for="community_message">Would you like to tell us about your interests, experience or ways you might contribute to the community?</label>
+                <p class="join-help" id="join-message-hint">Please do not include other people’s personal contact details without their consent.</p>
+                <textarea id="community_message" name="community_message" maxlength="3000" aria-describedby="join-message-hint"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="join-group">
+              <legend>Statutes and privacy</legend>
+              <div class="join-confirmations">
+                <div class="join-option">
+                  <input type="checkbox" id="statutes_accepted" name="statutes_accepted" value="2026-11-20" required>
+                  <label for="statutes_accepted">I apply for membership of Nova Tempora and agree to its statutes of 20 November 2026. <span class="required" aria-hidden="true">*</span></label>
+                </div>
+                <div class="join-option">
+                  <input type="checkbox" id="privacy_acknowledged" name="privacy_acknowledged" value="yes" required>
+                  <label for="privacy_acknowledged">I have read and taken note of the privacy notice. <span class="required" aria-hidden="true">*</span></label>
+                </div>
+              </div>
+              <ul class="join-documents">
+                <li><a href="../statuten.html" hreflang="de-CH">Statutes (German original)</a> · <a href="statutes.html">Non-binding English summary</a></li>
+                <li><a href="privacy.html#membership">Membership privacy notice</a></li>
+              </ul>
+            </fieldset>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-gold" disabled>Submit application</button>
+            </div>
+          </form>
+        </div>
+        <aside class="contact-aside" aria-label="Admission process">
+          <div class="aside-card">
+            <h2>What happens next?</h2>
+            <p>The board reviews your application and decides on admission under Article 5 of the statutes. While the board has two members, both must expressly agree under Article 12.</p>
+            <p>Your membership begins when the board confirms your admission. A submission receipt only confirms that we received your application.</p>
+          </div>
+          <div class="aside-card">
+            <h2>Membership fees</h2>
+            <p>Membership fees have yet to be confirmed. We’ll let you know about any fees before your admission is final.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-small">© 2026 Nova Tempora · History · Technology · Society</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="association.html">Association</a>
+        <a href="join.html" aria-current="page">Become a member</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="statutes.html">Statutes</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:info@novatempora.ch">Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
