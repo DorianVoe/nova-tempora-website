@@ -89,24 +89,26 @@ p { color: var(--muted); }
 .themes { border-top: 1px solid var(--line); background: linear-gradient(180deg,rgba(23,94,135,.06),transparent 77%); }
 .themes-layout { display: grid; grid-template-columns: minmax(0,.94fr) minmax(0,1.06fr); align-items: center; gap: clamp(26px, 6vw, 76px); margin-bottom: 36px; }
 .themes-visual { position: relative; overflow: hidden; background: #0c1a2b; border: 1px solid var(--line); border-radius: 19px; }
-.themes-visual img { width: 100%; }
-.themes-visual .sr-only { top: 50%; left: 50%; }
+.themes-image { width: 100%; height: auto; }
 .themes-visual.is-over-theme { cursor: pointer; }
-.theme-overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-.theme-overlay ellipse {
-  fill: var(--theme-accent);
-  fill-opacity: .10;
-  stroke: var(--theme-accent);
-  stroke-width: 2;
-  vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 0 5px var(--theme-accent));
-  opacity: 0;
-  transition: opacity 300ms ease;
+.theme-hotspot {
+  position: absolute;
+  appearance: none;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+  transition: border-color 280ms ease, box-shadow 280ms ease;
 }
+.theme-hotspot.is-active {
+  border-color: rgba(var(--theme-glow), .88);
+  box-shadow: 0 0 12px rgba(var(--theme-glow), .55);
+}
+.theme-hotspot:focus-visible { outline-color: var(--theme-accent); }
 .themes-copy h2 { margin: 13px 0 18px; }
 .themes-copy p { line-height: 1.85; font-size: 1.04rem; }
 .topic-cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
-.themes { --topic-lift: -3px; }
 .themes [data-theme="history"] { --theme-accent: var(--gold); --theme-glow: 235, 189, 112; }
 .themes [data-theme="technology"] { --theme-accent: var(--blue); --theme-glow: 117, 205, 236; }
 .themes [data-theme="society"] { --theme-accent: var(--mint); --theme-glow: 141, 218, 199; }
@@ -116,16 +118,16 @@ p { color: var(--muted); }
   border-radius: 16px;
   background: linear-gradient(160deg, rgba(20,48,68,.94), rgba(9,28,42,.92));
   padding: 30px 27px;
-  transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+  transition: border-color 280ms ease, box-shadow 280ms ease;
 }
 .topic-card .number { font-size: .72rem; font-weight: 800; letter-spacing: .16em; color: var(--theme-accent); }
 .topic-icon {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   margin-bottom: 12px;
   color: var(--theme-accent);
-  transition: filter 300ms ease;
+  transition: filter 280ms ease;
 }
 .topic-button {
   padding: 0;
@@ -142,31 +144,18 @@ p { color: var(--muted); }
   position: absolute;
   inset: 0;
   border-radius: 15px;
-  /* Counter the lift so the card's pointer target stays in its original slot. */
-  transform: translateY(calc(-1 * var(--card-offset, 0px)));
-  transition: transform 300ms ease;
 }
 .topic-button:focus-visible { outline: none; }
 .topic-button:focus-visible::after { outline: 2px solid var(--theme-accent); outline-offset: 4px; }
-.themes[data-active-theme="history"] .theme-overlay [data-theme="history"],
-.themes[data-active-theme="technology"] .theme-overlay [data-theme="technology"],
-.themes[data-active-theme="society"] .theme-overlay [data-theme="society"] { opacity: 1; }
-.themes[data-active-theme="history"] .topic-card[data-theme="history"],
-.themes[data-active-theme="technology"] .topic-card[data-theme="technology"],
-.themes[data-active-theme="society"] .topic-card[data-theme="society"] {
+.topic-card.is-active {
   border-color: var(--theme-accent);
-  box-shadow: 0 6px 24px rgba(var(--theme-glow), .18), inset 0 0 44px rgba(var(--theme-glow), .10);
-  --card-offset: var(--topic-lift);
-  transform: translateY(var(--card-offset));
+  box-shadow: 0 6px 20px rgba(var(--theme-glow), .16), inset 0 0 36px rgba(var(--theme-glow), .08);
 }
-.themes[data-active-theme="history"] [data-theme="history"] .topic-icon,
-.themes[data-active-theme="technology"] [data-theme="technology"] .topic-icon,
-.themes[data-active-theme="society"] [data-theme="society"] .topic-icon {
-  filter: drop-shadow(0 0 6px rgba(var(--theme-glow), .55));
+.topic-card.is-active .topic-icon {
+  filter: drop-shadow(0 0 5px rgba(var(--theme-glow), .45));
 }
 @media (prefers-reduced-motion: reduce) {
-  .themes { --topic-lift: 0px; }
-  .themes .topic-card, .themes .topic-icon, .topic-button::after, .theme-overlay ellipse { transition: none; }
+  .themes .topic-card, .themes .topic-icon, .theme-hotspot { transition: none; }
 }
 .topic-card h3 { margin: 20px 0 13px; }
 .topic-card p { margin: 0; font-size: .95rem; line-height: 1.75; }
